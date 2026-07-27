@@ -12,7 +12,7 @@ export default function Hero() {
       <HeroVisual />
       
       {/* Left Content Area */}
-      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[130px] lg:pt-[190px] px-8 lg:pl-[65px] flex flex-col">
+      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[130px] lg:pt-[190px] px-8 lg:pl-[65px] flex flex-col pb-[45vh] lg:pb-0">
         <div className="max-w-[650px]">
           
           {/* Eyebrow */}
