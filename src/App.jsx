@@ -4,6 +4,7 @@ import OurStory from './components/OurStory';
 import OurServices from './components/OurServices';
 import Testimonials from './components/Testimonials';
 import Partners from './components/Partners';
+import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <OurServices />
       <Testimonials />
       <Partners />
+      <CTA />
       <Footer />
     </main>
   );
