@@ -41,7 +41,7 @@ function HexagonTile({ partner }) {
 
 export default function Partners() {
   return (
-    <section className="relative w-full bg-[#FBF9F6] pt-24 lg:pt-36 pb-32 lg:pb-48 overflow-hidden selection:bg-[#8A1C22] selection:text-white">
+    <section className="relative w-full bg-[#FBF9F6] pt-10 lg:pt-16 pb-10 lg:pb-16 overflow-hidden selection:bg-[#8A1C22] selection:text-white">
       
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 flex flex-col items-center">
         

@@ -23,23 +23,14 @@ export default function Header() {
         className="absolute top-0 left-0 w-full h-[90px] lg:h-[100px] z-50 flex items-center justify-between px-6 lg:px-[60px]"
         style={{ 
           borderBottom: '1px solid rgba(120,90,70,.08)',
-          background: 'linear-gradient(90deg, rgba(247,243,236,0.88) 0%, rgba(246,241,234,0.88) 55%, rgba(239,231,220,0.88) 100%)',
+          background: 'rgba(246,241,232,0.95)',
           backdropFilter: 'blur(18px)',
           WebkitBackdropFilter: 'blur(18px)'
         }}
       >
-        {/* Right Side Darker Beige Transition */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            background: 'rgba(214,198,181,0.55)',
-            clipPath: 'polygon(60.4% 0, 100% 0, 100% 100%, calc(60.4% - 27px) 100%)'
-          }}
-        />
-
         {/* Gold Architectural Detail Line */}
         <div 
-          className="absolute top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#D4AF37]/60 to-transparent z-0 hidden lg:block"
+          className="absolute top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#D4AF37]/40 to-transparent z-0 hidden lg:block"
           style={{
             left: '60.4%',
             transform: 'skewX(-15deg)',

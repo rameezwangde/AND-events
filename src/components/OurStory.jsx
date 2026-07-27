@@ -19,17 +19,17 @@ const featureStrips = [
 ];
 
 export default function OurStory() {
-  const radius = 310; // dotted circle radius
+  const radius = 280; // dotted circle radius
 
   return (
-    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-[120px] pb-[120px]">
+    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-[80px] pb-10">
       
       {/* Decorative Background Elements */}
-      <div className="absolute top-10 left-10 w-[200px] h-[200px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50"></div>
-      <div className="absolute bottom-10 right-10 w-[200px] h-[200px] border-b-[1px] border-r-[1px] border-[#C8A56A]/20 rounded-br-full opacity-50"></div>
+      <div className="absolute top-0 left-0 w-[50vw] max-w-[400px] h-[50vw] max-h-[400px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50 md:top-5 md:left-5"></div>
+      <div className="absolute bottom-0 right-0 w-[50vw] max-w-[400px] h-[50vw] max-h-[400px] border-b-[1px] border-r-[1px] border-[#C8A56A]/20 rounded-br-full opacity-50 md:bottom-5 md:right-5"></div>
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.03] pointer-events-none"></div>
 
-      <div className="max-w-[1450px] mx-auto px-6 lg:px-[100px] relative z-10">
+      <div className="w-full px-8 lg:px-[65px] relative z-10">
         
         {/* Main 2-Column Layout */}
         <div className="flex flex-col xl:flex-row items-center justify-between gap-20 xl:gap-[40px] mb-24">
@@ -44,7 +44,7 @@ export default function OurStory() {
           >
             {/* Eyebrow */}
             <div className="flex flex-col items-start mb-8">
-              <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#6B0F1A] font-bold mb-3">
+              <span className="font-sans text-[14px] md:text-[16px] uppercase tracking-[0.25em] text-[#6B0F1A] font-bold mb-3">
                 Our Story
               </span>
               <div className="flex items-center w-full max-w-[100px]">
@@ -55,7 +55,7 @@ export default function OurStory() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="font-serif text-[42px] md:text-[56px] xl:text-[68px] leading-[1.05] mb-10">
+            <h2 className="font-serif text-[36px] md:text-[48px] xl:text-[56px] leading-[1.05] mb-10 ml-[-2px] md:ml-[-4px]">
               <span className="block text-black font-medium">Crafting Moments.</span>
               <span className="block text-[#6B0F1A] font-medium">Creating Legacies.</span>
             </h2>
@@ -84,7 +84,7 @@ export default function OurStory() {
           <div className="w-full xl:w-[58%] relative flex justify-center items-center h-[700px] xl:h-[800px] mt-20 xl:mt-0">
             
             {/* Center Area */}
-            <div className="relative w-[300px] h-[300px] md:w-[420px] md:h-[420px] z-10 flex items-center justify-center">
+            <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] z-10 flex items-center justify-center">
               
               {/* Soft Radial Light */}
               <div className="absolute inset-0 bg-[#6B0F1A] blur-[100px] rounded-full opacity-10"></div>
@@ -104,7 +104,7 @@ export default function OurStory() {
             </div>
 
             {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
-            <div className="absolute w-[450px] h-[450px] md:w-[620px] md:h-[620px] rounded-full border-[1.5px] border-dotted border-[#6B0F1A]/40 z-0 hidden md:block">
+            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#6B0F1A]/40 z-0 hidden md:block">
               {/* Animated Traveling Dot */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -135,7 +135,7 @@ export default function OurStory() {
                 return (
                   <div
                     key={card.id}
-                    className="absolute top-1/2 left-1/2 w-[250px] pointer-events-auto z-20"
+                    className="absolute top-1/2 left-1/2 w-[220px] pointer-events-auto z-20"
                     style={{
                       transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
                     }}

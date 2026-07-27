@@ -16,7 +16,7 @@ const testimonials2 = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full bg-[#FBF9F6] border-y border-[#8A1C22]/10 overflow-hidden selection:bg-[#8A1C22] selection:text-white py-24 lg:py-40">
+    <section className="relative w-full bg-[#FBF9F6] border-y border-[#8A1C22]/10 overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-12 pb-10 lg:pt-16 lg:pb-16">
       
       {/* Custom Styles for Infinite Marquee */}
       <style>{`
@@ -48,13 +48,13 @@ export default function Testimonials() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 relative z-10 mb-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-6">
           <div className="w-[30px] h-[1px] bg-[#8A1C22]/30"></div>
-          <span className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
+          <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
             Client Stories
           </span>
           <div className="w-[30px] h-[1px] bg-[#8A1C22]/30"></div>
         </div>
 
-        <h2 className="font-serif text-[42px] md:text-[56px] text-[#1B1B1B] leading-tight">
+        <h2 className="font-serif text-[36px] md:text-[44px] text-[#1B1B1B] leading-tight">
           Words of Praise
         </h2>
       </div>

@@ -2,17 +2,17 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CalendarDays, Cake, Heart, Clapperboard, Music, Megaphone, Sparkles, Camera } from 'lucide-react';
 
 const services = [
-  { id: 1, title: 'CORPORATE EVENTS', desc: 'Gala Dinners, Product Launches, Conferences, Team Building and more.', icon: CalendarDays, img: 'https://picsum.photos/seed/corporate/800/600', rotate: -3, pinType: 'clip', offsetClass: 'xl:mt-10 xl:mr-[-10px] z-20' },
-  { id: 2, title: 'BIRTHDAY / THEME PARTIES', desc: 'From intimate celebrations to grand theme parties, we design magical moments.', icon: Cake, img: 'https://picsum.photos/seed/birthday/800/600', rotate: 2, pinType: 'tape', offsetClass: 'xl:mt-[-10px] z-10' },
-  { id: 3, title: 'WEDDING CELEBRATIONS', desc: 'End-to-end wedding planning and flawless execution for your beautiful beginning.', icon: Heart, img: 'https://picsum.photos/seed/wedding/800/600', rotate: -4, pinType: 'pin', offsetClass: 'xl:mt-16 xl:ml-[-10px] z-30' },
+  { id: 1, title: 'CORPORATE EVENTS', desc: 'Gala Dinners, Product Launches, Conferences, Team Building and more.', icon: CalendarDays, img: 'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/11/01/1154/SELRS-P1200-Grand-Ballroom-Business-Conference.jpg/SELRS-P1200-Grand-Ballroom-Business-Conference.4x3.jpg', rotate: -3, pinType: 'clip', offsetClass: 'xl:mt-10 xl:mr-[-10px] z-20' },
+  { id: 2, title: 'BIRTHDAY / THEME PARTIES', desc: 'From intimate celebrations to grand theme parties, we design magical moments.', icon: Cake, img: 'https://img.freepik.com/premium-photo/birthday-party-with-balloons-banner-that-says-bday_1015384-65431.jpg', rotate: 2, pinType: 'tape', offsetClass: 'xl:mt-8 z-10' },
+  { id: 3, title: 'WEDDING CELEBRATIONS', desc: 'End-to-end wedding planning and flawless execution for your beautiful beginning.', icon: Heart, img: 'https://i.pinimg.com/originals/c3/3b/80/c33b8076fdce4f23372ae540744341c5.gif', rotate: -4, pinType: 'pin', offsetClass: 'xl:mt-16 xl:ml-[-10px] z-30' },
   { id: 4, title: 'IN-HOUSE PRODUCTION', desc: 'State-of-the-art in-house production and technical solutions for a seamless experience.', icon: Clapperboard, img: 'https://picsum.photos/seed/production/800/600', rotate: 4, pinType: 'tape', offsetClass: 'xl:mt-[20px] xl:mr-[-15px] z-40' },
-  { id: 5, title: 'ENTERTAINMENT & PERFORMERS', desc: 'Dancers, Performers, Bollywood artists, Samba Dancers and Percussionists.', icon: Music, img: 'https://picsum.photos/seed/entertainment/800/600', rotate: -1, pinType: 'clip', offsetClass: 'xl:mt-8 z-20' },
-  { id: 6, title: 'EVENTS & ACTIVATIONS', desc: 'Mall Activations, Road Shows, Exhibitions, Supplier Meets, and Annual Days.', icon: Megaphone, img: 'https://picsum.photos/seed/activations/800/600', rotate: 3, pinType: 'tape', offsetClass: 'xl:mt-20 xl:ml-[-20px] z-30' },
+  { id: 5, title: 'ENTERTAINMENT & PERFORMERS', desc: 'Dancers, Performers, Bollywood artists, Samba Dancers and Percussionists.', icon: Music, img: 'https://tse4.mm.bing.net/th/id/OIP.yq8FRnkRTxObxDck6TTalgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3', rotate: -1, pinType: 'clip', offsetClass: 'xl:mt-8 z-20' },
+  { id: 6, title: 'EVENTS & ACTIVATIONS', desc: 'Mall Activations, Road Shows, Exhibitions, Supplier Meets, and Annual Days.', icon: Megaphone, img: 'https://www.canvasidea.in/images/Exhibitions.webp', rotate: 3, pinType: 'tape', offsetClass: 'xl:mt-20 xl:ml-[-20px] z-30' },
 ];
 
 export default function OurServices() {
   return (
-    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-20 pb-10 lg:pt-36 lg:pb-20 px-6 lg:px-10">
+    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-10 pb-8 lg:pt-10 lg:pb-8 px-6 lg:px-10">
       
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.3] pointer-events-none"></div>
@@ -23,7 +23,7 @@ export default function OurServices() {
         <div className="w-full xl:w-[40%] flex flex-col xl:sticky xl:top-[120px]">
           
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
+            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
               Our Services
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[#8A1C22] opacity-50"></div>
@@ -57,7 +57,7 @@ export default function OurServices() {
         </div>
 
         {/* RIGHT COLUMN - Moodboard Collage */}
-        <div className="w-full xl:w-[60%] relative">
+        <div className="w-full xl:w-[60%] relative xl:pt-[80px]">
           
           {/* Decorative Doodles */}
           <svg className="absolute top-[20%] left-[-5%] w-[80px] h-[80px] text-[#8A1C22] opacity-30 -rotate-12 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

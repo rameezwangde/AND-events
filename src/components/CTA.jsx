@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="relative w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-[1300px] mx-auto my-16 lg:my-28 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[3rem] shadow-[0_20px_50px_rgba(138,28,34,0.2)]">
+    <section className="relative w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-[1300px] mx-auto mt-8 lg:mt-12 mb-16 lg:mb-28 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[3rem] shadow-[0_20px_50px_rgba(138,28,34,0.2)]">
       
       {/* Background Image */}
       <div 

@@ -5,14 +5,14 @@ import HeroVisual from './HeroVisual';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[100vh] min-h-[900px] bg-ivory overflow-hidden selection:bg-deep-maroon selection:text-white">
+    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[900px] bg-ivory overflow-hidden selection:bg-deep-maroon selection:text-white pb-20 lg:pb-0">
       <Header />
       
       {/* Background/Visual Layer */}
       <HeroVisual />
       
       {/* Left Content Area */}
-      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[130px] lg:pt-[190px] px-8 lg:pl-[65px] flex flex-col pb-[45vh] lg:pb-0">
+      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-[10vh] lg:pb-12">
         <div className="max-w-[650px]">
           
           {/* Eyebrow */}
@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-8"
+            className="flex flex-col sm:flex-row items-center gap-2"
           >
             <a 
               href="#services" 
@@ -74,14 +74,13 @@ export default function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
             </a>
             
-            <button className="flex items-center gap-4 group">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full border border-deep-maroon/30 text-deep-maroon group-hover:scale-105 group-hover:border-deep-maroon transition-all">
-                <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
-              </div>
-              <span className="font-sans text-[11px] uppercase tracking-widest font-medium text-deep-maroon">
-                Watch Showreel
-              </span>
-            </button>
+            <a 
+              href="#contact" 
+              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-deep-maroon text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-dark-maroon transition-colors group"
+            >
+              Contact Us
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
+            </a>
           </motion.div>
           
         </div>
