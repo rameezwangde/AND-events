@@ -32,7 +32,7 @@ export default function OurStory() {
       <div className="w-full px-8 lg:px-[65px] relative z-10">
         
         {/* Main 2-Column Layout */}
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-20 xl:gap-[40px] mb-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-20 lg:gap-[40px] mb-24">
           
           {/* LEFT COLUMN (approx 42%) */}
           <motion.div 
@@ -40,7 +40,7 @@ export default function OurStory() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full xl:w-[42%] flex flex-col z-20"
+            className="w-full lg:w-[42%] flex flex-col z-20"
           >
             {/* Eyebrow */}
             <div className="flex flex-col items-start mb-8">
@@ -81,7 +81,7 @@ export default function OurStory() {
           </motion.div>
 
           {/* RIGHT COLUMN - Circular Diagram (approx 58%) */}
-          <div className="w-full xl:w-[58%] relative flex justify-center items-center h-[700px] xl:h-[800px] mt-20 xl:mt-0">
+          <div className="w-full lg:w-[58%] relative flex justify-center items-center h-[700px] lg:h-[800px] mt-20 lg:mt-0">
             
             {/* Center Area */}
             <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] z-10 flex items-center justify-center">
