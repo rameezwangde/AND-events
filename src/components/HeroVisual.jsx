@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import heroImage from '../assets/hero-event.png';
+import heroImage from '../assets/and2.png';
 
 export default function HeroVisual() {
   return (
