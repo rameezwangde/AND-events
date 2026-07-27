@@ -1,199 +1,132 @@
 import { motion } from 'framer-motion';
-import { 
-  ClipboardList, 
-  Lightbulb, 
-  Settings, 
-  MapPin, 
-  Armchair, 
-  Users, 
-  Mic, 
-  Camera,
-  Gem,
-  ShieldCheck,
-  Heart,
-  Star
-} from 'lucide-react';
-import ourStoryImage from '../assets/our-story-image.png';
+import { ArrowRight, CalendarDays, Cake, Heart, Clapperboard, Music, Megaphone, Sparkles, Camera } from 'lucide-react';
 
 const services = [
-  { icon: ClipboardList, title: "EVENT STRATEGY & PLANNING", desc: "We craft strategic plans tailored to your goals, audience and occasion." },
-  { icon: Lightbulb, title: "CREATIVE CONCEPT & DESIGN", desc: "Original concepts and stunning designs that turn your ideas into unforgettable experiences." },
-  { icon: Settings, title: "PRODUCTION & TECHNICAL", desc: "State-of-the-art production and technical solutions for seamless event delivery." },
-  { icon: MapPin, title: "VENUE SOURCING & MANAGEMENT", desc: "We find the perfect venue and manage every detail to suit your vision and requirements." },
-  { icon: Armchair, title: "EVENT STYLING & DÉCOR", desc: "Thoughtful styling and exquisite décor that elevate the ambience and experience." },
-  { icon: Users, title: "GUEST EXPERIENCE & HOSPITALITY", desc: "Exceptional hospitality and guest experiences that leave lasting impressions." },
-  { icon: Mic, title: "ENTERTAINMENT & TALENT", desc: "Curated entertainment and talent that engage, inspire and captivate your guests." },
-  { icon: Camera, title: "PHOTOGRAPHY & VIDEOGRAPHY", desc: "Capturing every moment with creativity and precision to tell your story beautifully." },
+  { id: 1, title: 'CORPORATE EVENTS', desc: 'Gala Dinners, Product Launches, Conferences, Team Building and more.', icon: CalendarDays, img: 'https://picsum.photos/seed/corporate/800/600', rotate: -3, pinType: 'clip', offsetClass: 'xl:mt-10 xl:mr-[-10px] z-20' },
+  { id: 2, title: 'BIRTHDAY / THEME PARTIES', desc: 'From intimate celebrations to grand theme parties, we design magical moments.', icon: Cake, img: 'https://picsum.photos/seed/birthday/800/600', rotate: 2, pinType: 'tape', offsetClass: 'xl:mt-[-10px] z-10' },
+  { id: 3, title: 'WEDDING CELEBRATIONS', desc: 'End-to-end wedding planning and flawless execution for your beautiful beginning.', icon: Heart, img: 'https://picsum.photos/seed/wedding/800/600', rotate: -4, pinType: 'pin', offsetClass: 'xl:mt-16 xl:ml-[-10px] z-30' },
+  { id: 4, title: 'IN-HOUSE PRODUCTION', desc: 'State-of-the-art in-house production and technical solutions for a seamless experience.', icon: Clapperboard, img: 'https://picsum.photos/seed/production/800/600', rotate: 4, pinType: 'tape', offsetClass: 'xl:mt-[20px] xl:mr-[-15px] z-40' },
+  { id: 5, title: 'ENTERTAINMENT & PERFORMERS', desc: 'Dancers, Performers, Bollywood artists, Samba Dancers and Percussionists.', icon: Music, img: 'https://picsum.photos/seed/entertainment/800/600', rotate: -1, pinType: 'clip', offsetClass: 'xl:mt-8 z-20' },
+  { id: 6, title: 'EVENTS & ACTIVATIONS', desc: 'Mall Activations, Road Shows, Exhibitions, Supplier Meets, and Annual Days.', icon: Megaphone, img: 'https://picsum.photos/seed/activations/800/600', rotate: 3, pinType: 'tape', offsetClass: 'xl:mt-20 xl:ml-[-20px] z-30' },
 ];
-
-const promisePillars = [
-  { icon: Gem, title: "EXPERIENCE", desc: "10+ years of expertise in delivering world-class events across Dubai." },
-  { icon: Users, title: "CREATIVITY", desc: "Innovative ideas and bespoke solutions tailored to you." },
-  { icon: ShieldCheck, title: "RELIABILITY", desc: "Trusted by clients for seamless execution every time." },
-  { icon: Heart, title: "PASSION", desc: "We don't just manage events, we create unforgettable memories." },
-];
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
 
 export default function OurServices() {
   return (
-    <section 
-      className="relative w-full overflow-hidden selection:bg-[#6E0F18] selection:text-white"
-      style={{
-        background: 'radial-gradient(circle at top left, #FBF8F3 0%, #F7F3EC 60%, #F1E8DB 100%)'
-      }}
-    >
-      <div className="max-w-[1600px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[120px] px-6 lg:px-[70px]">
+    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-20 pb-10 lg:pt-36 lg:pb-20 px-6 lg:px-10">
+      
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.3] pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col xl:flex-row items-start justify-between gap-16 xl:gap-8">
         
-        {/* Top Layout: Arched Image (Left) + Vertical Services List (Right) */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-[60px] lg:gap-[100px] mb-20 lg:mb-32">
+        {/* LEFT COLUMN */}
+        <div className="w-full xl:w-[40%] flex flex-col xl:sticky xl:top-[120px]">
           
-          {/* Left Column - Arched Image (Approx 40%) */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="w-full lg:w-[40%] relative flex justify-center lg:justify-start"
-          >
-            {/* Decorative dotted lines and star */}
-            <div className="absolute left-[-20px] lg:left-[-40px] top-1/2 -translate-y-1/2 flex gap-2 pointer-events-none hidden md:flex opacity-60">
-              <div className="flex flex-col gap-2">
-                {[...Array(12)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 rounded-full bg-[#C8A977]"></div>
-                ))}
-              </div>
-              <div className="flex flex-col gap-2 mt-8">
-                {[...Array(8)].map((_, i) => (
-                  <div key={i} className="w-1 h-1 rounded-full bg-[#C8A977]"></div>
-                ))}
-              </div>
-              <Star className="absolute top-[-30px] left-2 w-6 h-6 text-[#C8A977] stroke-[1px]" />
-            </div>
+          <div className="flex items-center gap-4 mb-6">
+            <span className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
+              Our Services
+            </span>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#8A1C22] opacity-50"></div>
+            <div className="flex-1 h-[1px] bg-[#8A1C22]/20"></div>
+          </div>
 
-            {/* Arched Image */}
-            <div 
-              className="w-full max-w-[450px] lg:max-w-none h-[600px] lg:h-[850px] overflow-hidden shadow-2xl relative"
-              style={{
-                borderTopLeftRadius: '250px',
-                borderTopRightRadius: '250px',
-                borderBottomLeftRadius: '12px',
-                borderBottomRightRadius: '12px',
-              }}
-            >
-              <img 
-                src={ourStoryImage} 
-                alt="Luxury Event Setup" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-              />
-              <div className="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none"></div>
-            </div>
-          </motion.div>
+          <h2 className="font-serif text-[48px] md:text-[64px] leading-[1.05] tracking-tight mb-6">
+            <span className="block text-[#1B1B1B]">Creating Experiences.</span>
+            <span className="block text-[#8A1C22]">Celebrating Together.</span>
+          </h2>
 
-          {/* Right Column - Vertical Services List (Approx 60%) */}
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="w-full lg:w-[60%] flex flex-col"
-          >
-            {services.map((service, index) => (
-              <motion.div 
-                key={index}
-                variants={fadeInUp}
-                className="flex items-center gap-6 lg:gap-8 py-6 lg:py-7 border-b border-[rgba(90,60,40,.12)] group hover:bg-[#FBF8F3]/50 transition-colors px-2 lg:px-4 rounded-xl"
+          {/* Brush stroke SVG */}
+          <div className="w-[140px] h-[12px] mb-10 text-[#8A1C22] opacity-80">
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-current">
+              <path d="M5,15 C40,5 120,5 195,15 C120,10 40,10 5,15 Z" />
+            </svg>
+          </div>
+
+          <p className="font-sans text-[#666] text-[16px] leading-[1.8] max-w-[420px] mb-12">
+            From corporate events to celebrations, theme parties to grand productions – we bring ideas to life with creativity, precision and passion.
+            <br /><br />
+            Whatever the occasion, we deliver an experience that stays with you forever.
+          </p>
+
+          <a href="#services" className="relative flex items-center justify-between w-max gap-8 h-[60px] bg-gradient-to-b from-[#8F1E26] to-[#6F1116] text-white font-sans text-[13px] uppercase tracking-[0.1em] font-semibold px-8 rounded-lg shadow-[0_15px_30px_-10px_rgba(138,28,34,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(138,28,34,0.6)] hover:-translate-y-1 hover:rotate-1 transition-all duration-400 group overflow-hidden">
+            <span className="relative z-10">Explore Our Services</span>
+            <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-400" />
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+          </a>
+
+        </div>
+
+        {/* RIGHT COLUMN - Moodboard Collage */}
+        <div className="w-full xl:w-[60%] relative">
+          
+          {/* Decorative Doodles */}
+          <svg className="absolute top-[20%] left-[-5%] w-[80px] h-[80px] text-[#8A1C22] opacity-30 -rotate-12 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M10,90 Q50,10 90,90 M80,70 L90,90 L70,90" />
+          </svg>
+          <svg className="absolute bottom-[20%] right-[-5%] w-[100px] h-[100px] text-[#8A1C22] opacity-20 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="50" cy="50" r="40" strokeDasharray="4 4" />
+          </svg>
+          <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-[#8A1C22] rounded-full opacity-20 hidden xl:block"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-6 xl:gap-8 relative">
+            
+            {services.map((card, idx) => (
+              <motion.div
+                key={card.id}
+                initial={{ opacity: 0, y: 60, rotate: 0 }}
+                whileInView={{ opacity: 1, y: 0, rotate: card.rotate }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
+                whileHover={{ rotate: 0, scale: 1.05, zIndex: 100, y: -10 }}
+                className={`relative bg-[#FFFDF9] rounded-[2px] p-4 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-15px_rgba(138,28,34,0.3)] transition-shadow duration-400 group cursor-pointer ${card.offsetClass}`}
+                style={{ 
+                  boxShadow: "2px 2px 10px rgba(0,0,0,0.05), inset 0 0 40px rgba(0,0,0,0.02)"
+                }}
               >
-                {/* Circular Icon */}
-                <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] rounded-full border border-[#6E0F18]/20 flex items-center justify-center shrink-0 group-hover:bg-[#6E0F18] transition-colors duration-400">
-                  <service.icon className="w-5 h-5 lg:w-6 lg:h-6 text-[#6E0F18] group-hover:text-white transition-colors duration-400 stroke-[1.5px]" />
+
+                {/* Paper details (Tapes, Clips, Pins) */}
+                {card.pinType === 'tape' && (
+                  <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 w-[60px] h-[25px] bg-white/60 backdrop-blur-sm border border-black/5 rotate-[-2deg] shadow-sm z-20 group-hover:rotate-[2deg] transition-transform"></div>
+                )}
+                {card.pinType === 'pin' && (
+                  <div className="absolute top-[10px] right-[15px] w-[14px] h-[14px] rounded-full bg-gradient-to-b from-white to-gray-300 shadow-md z-20">
+                    <div className="absolute inset-2 rounded-full bg-gray-400"></div>
+                  </div>
+                )}
+                {card.pinType === 'clip' && (
+                  <div className="absolute top-[-15px] left-[20px] w-[15px] h-[40px] border-[2px] border-gray-400 rounded-full z-20 rotate-[-10deg]"></div>
+                )}
+
+                {/* Card Image Wrapper */}
+                <div className="relative mb-6">
+                  <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden bg-gray-100">
+                    <motion.img 
+                      src={card.img} 
+                      alt={card.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  {/* Floating Icon */}
+                  <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-10 h-10 bg-[#8A1C22] rounded-full flex items-center justify-center border-[3px] border-[#FFFDF9] shadow-lg group-hover:-translate-y-2 group-hover:scale-110 transition-transform duration-400 z-30">
+                    <card.icon className="w-4 h-4 text-white stroke-[2px]" />
+                  </div>
                 </div>
-                
-                {/* Text Content */}
-                <div className="flex-1 pr-4">
-                  <h5 className="font-sans text-[13px] lg:text-[14px] uppercase tracking-[0.12em] text-[#6E0F18] font-bold mb-1 lg:mb-2 group-hover:translate-x-1 transition-transform duration-300">
-                    {service.title}
-                  </h5>
-                  <p className="font-sans text-[13px] lg:text-[14px] text-[#2B2B2B] leading-relaxed max-w-[90%]">
-                    {service.desc}
+
+                {/* Content */}
+                <div className="pt-2 pb-4 px-2 text-center">
+                  <h4 className="font-sans text-[11px] uppercase tracking-[0.1em] font-bold text-[#8A1C22] mb-2 leading-tight">
+                    {card.title}
+                  </h4>
+                  <p className="font-sans text-[11px] text-[#666] leading-relaxed line-clamp-3">
+                    {card.desc}
                   </p>
                 </div>
 
-                {/* Large Number */}
-                <div className="flex items-center gap-3 lg:gap-4 shrink-0">
-                  <span className="font-serif text-[28px] lg:text-[34px] text-[#6E0F18] opacity-80 group-hover:opacity-100 transition-opacity">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className="w-[15px] lg:w-[20px] h-[1px] bg-[#6E0F18]/30 group-hover:bg-[#6E0F18] transition-colors"></div>
-                </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
+          
         </div>
-
-        {/* Bottom Block: The And Promise */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full bg-gradient-to-r from-[#4B080E] to-[#6E0F18] rounded-[24px] lg:rounded-[36px] overflow-hidden flex flex-col lg:flex-row p-8 lg:p-14 relative shadow-2xl"
-        >
-          {/* Subtle Decorative Star */}
-          <Star className="absolute top-8 right-8 w-8 h-8 text-[#C8A977]/20 stroke-[1px]" />
-          <div className="absolute bottom-[-20%] right-[-5%] w-[40%] h-[150%] rounded-full border border-white/5 pointer-events-none"></div>
-
-          {/* Left Area (approx 35%) */}
-          <div className="w-full lg:w-[35%] flex flex-col pr-0 lg:pr-12 mb-12 lg:mb-0 relative z-10">
-            <span className="font-sans text-[10px] lg:text-[11px] uppercase tracking-[0.2em] text-[#C8A977] font-bold mb-6 block">
-              The And Promise
-            </span>
-            <h3 className="font-serif text-[32px] lg:text-[40px] xl:text-[46px] text-white leading-[1.1] mb-8">
-              More Than Events.<br />We Create Impact.
-            </h3>
-            <div className="w-[50px] h-[1px] bg-[#C8A977]/60 mb-8"></div>
-            <p className="font-sans text-white/70 text-[14px] leading-relaxed max-w-[320px]">
-              Our commitment is to deliver excellence at every step, ensuring your event is seamless, meaningful and unforgettable.
-            </p>
-          </div>
-
-          {/* Right Area (approx 65%) - 4 Pillars */}
-          <div className="w-full lg:w-[65%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 relative z-10">
-            {promisePillars.map((pillar, index) => (
-              <div 
-                key={index} 
-                className={`flex flex-col items-center text-center p-6 lg:p-8 relative group ${
-                  index !== promisePillars.length - 1 ? 'xl:border-r border-white/10' : ''
-                } ${
-                  index % 2 === 0 ? 'md:border-r border-white/10 xl:border-r' : ''
-                }`}
-              >
-                <div className="w-[60px] h-[60px] lg:w-[70px] lg:h-[70px] rounded-full border border-white/20 flex items-center justify-center mb-6 lg:mb-8 group-hover:bg-white/5 transition-colors duration-300">
-                  <pillar.icon className="w-6 h-6 lg:w-7 lg:h-7 text-white stroke-[1px] group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <h5 className="font-sans text-[12px] lg:text-[13px] uppercase tracking-[0.15em] text-white font-bold mb-4">
-                  {pillar.title}
-                </h5>
-                <p className="font-sans text-[13px] text-white/60 leading-relaxed max-w-[200px]">
-                  {pillar.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-        </motion.div>
-
       </div>
     </section>
   );
