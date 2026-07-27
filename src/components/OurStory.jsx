@@ -1,246 +1,239 @@
 import { motion } from 'framer-motion';
-import { Lightbulb, Users, Gem, Star } from 'lucide-react';
+import { ArrowRight, Lightbulb, Star, Users, Flame, Settings, Briefcase, Gem } from 'lucide-react';
 import ourStoryImage from '../assets/our-story-image.png';
-import heroEventImage from '../assets/hero-event.png';
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }
-};
+const floatingCards = [
+  { id: 1, title: 'CREATIVE VISION', desc: 'We bring imagination to life with concepts that are fresh, impactful, and memorable.', icon: Lightbulb, angle: -90 },
+  { id: 2, title: 'DETAIL PERFECTION', desc: 'From the smallest detail to the grandest setup, we leave nothing to chance.', icon: Star, angle: -30 },
+  { id: 3, title: 'EXPERIENCE MAKERS', desc: 'We don\'t just plan events, we craft experiences that people remember forever.', icon: Users, angle: 30 },
+  { id: 4, title: 'PASSION DRIVEN', desc: 'Our passion fuels every event we create and every client relationship we build.', icon: Flame, angle: 90 },
+  { id: 5, title: 'SEAMLESS EXECUTION', desc: 'With a dedicated team and proven process, we ensure every event runs flawlessly.', icon: Settings, angle: 150 },
+  { id: 6, title: 'CLIENT FOCUSED', desc: 'Your vision, preferences, and satisfaction guide everything we do.', icon: Briefcase, angle: -150 },
+];
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
+const featureStrips = [
+  { title: 'VISION DRIVEN', desc: 'We imagine beyond the ordinary to deliver exceptional experiences.', icon: Lightbulb },
+  { title: 'CLIENT FOCUSED', desc: 'Your dreams guide us. Your satisfaction drives us.', icon: Users },
+  { title: 'DETAIL OBSESSED', desc: 'From the smallest detail to the grandest design, we perfect everything.', icon: Gem },
+  { title: 'EXPERIENCE MAKERS', desc: 'We don\'t just plan events, we craft moments that live in memories forever.', icon: Star },
+];
 
 export default function OurStory() {
+  const radius = 310; // dotted circle radius
+
   return (
-    <section 
-      className="relative w-full overflow-hidden selection:bg-[#6E0F18] selection:text-white"
-      style={{
-        background: 'radial-gradient(circle at top left, #FBF8F3 0%, #F7F3EC 55%, #F1E8DB 100%)'
-      }}
-    >
-      {/* Decorative Gold Curved Line */}
-      <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none overflow-hidden opacity-40 hidden lg:block">
-        <svg viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-[-100px] right-[-100px] w-full h-full min-w-[1200px]">
-          <path d="M 200,800 C 600,800 800,200 1400,0" stroke="#C8A977" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-        </svg>
-      </div>
+    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-[120px] pb-[120px]">
+      
+      {/* Decorative Background Elements */}
+      <div className="absolute top-10 left-10 w-[200px] h-[200px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50"></div>
+      <div className="absolute bottom-10 right-10 w-[200px] h-[200px] border-b-[1px] border-r-[1px] border-[#C8A56A]/20 rounded-br-full opacity-50"></div>
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.03] pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[120px] px-6 lg:px-[70px]">
+      <div className="max-w-[1450px] mx-auto px-6 lg:px-[100px] relative z-10">
         
-        {/* TOP LAYOUT: Left Content (46%) + Right Image (54%) */}
-        <div className="flex flex-col lg:flex-row items-start justify-between relative mb-20 lg:mb-[-80px]">
+        {/* Main 2-Column Layout */}
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-20 xl:gap-[40px] mb-24">
           
-          {/* Left Content (46%) */}
+          {/* LEFT COLUMN (approx 42%) */}
           <motion.div 
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="w-full lg:w-[46%] pt-0 lg:pt-10 relative z-20"
+            className="w-full xl:w-[42%] flex flex-col z-20"
           >
-            {/* Top Label */}
-            <motion.div variants={fadeIn} className="mb-8 lg:mb-10">
-              <h4 className="font-sans text-[14px] uppercase tracking-[0.25em] text-[#6E0F18] font-medium mb-4">
+            {/* Eyebrow */}
+            <div className="flex flex-col items-start mb-8">
+              <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#6B0F1A] font-bold mb-3">
                 Our Story
-              </h4>
-              <div className="w-[70px] h-[1px] bg-[#6E0F18]/40"></div>
-            </motion.div>
+              </span>
+              <div className="flex items-center w-full max-w-[100px]">
+                <div className="flex-1 h-[1px] bg-[#6B0F1A]/30"></div>
+                <div className="w-[6px] h-[6px] border border-[#6B0F1A]/50 rotate-45 mx-2"></div>
+                <div className="flex-1 h-[1px] bg-[#6B0F1A]/30"></div>
+              </div>
+            </div>
 
-            {/* Heading */}
-            <motion.h2 
-              variants={fadeIn}
-              className="font-serif text-[42px] lg:text-[76px] leading-[0.95] tracking-tight mb-8 lg:mb-12"
-            >
-              <span className="block text-black">Crafting Moments.</span>
-              <span className="block text-[#6E0F18]">Creating Legacies.</span>
-            </motion.h2>
+            {/* Main Heading */}
+            <h2 className="font-serif text-[42px] md:text-[56px] xl:text-[68px] leading-[1.05] mb-10">
+              <span className="block text-black font-medium">Crafting Moments.</span>
+              <span className="block text-[#6B0F1A] font-medium">Creating Legacies.</span>
+            </h2>
 
-            <motion.div variants={fadeIn} className="w-[70px] h-[1px] bg-[#6E0F18]/40 mb-8 lg:mb-12"></motion.div>
+            {/* Decorative divider under heading */}
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-[40px] h-[1px] bg-[#6B0F1A]/30"></div>
+              <div className="w-[4px] h-[4px] rounded-full bg-[#C8A56A]"></div>
+              <div className="w-[100px] h-[1px] bg-gradient-to-r from-[#6B0F1A]/30 to-transparent"></div>
+            </div>
 
-            {/* Paragraphs */}
-            <motion.div variants={fadeIn} className="font-sans text-[16px] lg:text-[18px] leading-[2] text-[#2B2B2B] max-w-[520px]">
-              <p className="mb-8 lg:mb-10">
-                AND Events Management was born from a simple belief – that every celebration is unique and every detail matters. What started as a passion for creating unforgettable experiences has grown into a full-service event management company trusted by clients across Dubai.
-              </p>
-              <p>
-                With creativity at our core and perfection in our process, we transform ideas into extraordinary events that leave lasting impressions.
-              </p>
-            </motion.div>
+            {/* Paragraph */}
+            <p className="font-sans text-[#555] text-[16px] md:text-[18px] leading-[1.9] max-w-[460px] mb-12">
+              AND Events Management was born from a simple belief – that every celebration is unique and every detail matters. What started as a passion for creating unforgettable experiences has grown into a full-service event management company trusted by clients across Dubai.<br /><br />
+              With creativity at our core and perfection in our process, we transform ideas into extraordinary events that leave lasting impressions.
+            </p>
+
+            {/* Outline Button */}
+            <a href="#journey" className="flex items-center justify-between w-max gap-6 h-[54px] bg-white text-[#6B0F1A] border border-[#6B0F1A] font-sans text-[12px] uppercase tracking-[0.15em] font-bold px-8 rounded-sm hover:bg-[#6B0F1A] hover:text-white transition-all duration-400 group shadow-md hover:shadow-xl">
+              Discover Our Journey
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-400" strokeWidth={1.5} />
+            </a>
           </motion.div>
 
-          {/* Right Image (54%) */}
-          <div className="w-full lg:w-[54%] h-[400px] sm:h-[500px] lg:h-[850px] relative mt-16 lg:mt-0 z-10 lg:absolute lg:right-[70px] lg:top-0">
-            <motion.div 
-              initial={{ scale: 1.08 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="w-full h-full relative"
-              style={{
-                clipPath: 'polygon(35% 0, 100% 0, 100% 100%, 0 100%, 0 70%, 8% 52%, 22% 20%)'
-              }}
-            >
-              <img 
-                src={ourStoryImage} 
-                alt="Luxury Banquet Setup" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-            </motion.div>
-
-            {/* Anniversary Badge */}
-            <motion.div 
-              initial={{ opacity: 0, rotate: -8 }}
-              whileInView={{ opacity: 1, rotate: 0 }}
-              transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="absolute left-[-10px] sm:left-[5%] top-[5%] lg:top-[20%] w-[120px] h-[120px] lg:w-[170px] lg:h-[170px] bg-[#6E0F18] rounded-full flex items-center justify-center shadow-2xl z-30"
-            >
-              <div className="w-[105px] h-[105px] lg:w-[150px] lg:h-[150px] rounded-full border border-white/20 flex flex-col items-center justify-center relative">
-                {/* Dots */}
-                <div className="absolute left-1 lg:left-2 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#C8A977] rounded-full"></div>
-                <div className="absolute right-1 lg:right-2 top-1/2 -translate-y-1/2 w-1 h-1 bg-[#C8A977] rounded-full"></div>
-                
-                <span className="font-sans text-[7px] lg:text-[9px] uppercase tracking-[0.3em] text-white/70 mb-1">
-                  Passion
-                </span>
-                <span className="font-serif text-[32px] lg:text-[42px] text-white leading-none mb-1 mt-1">
-                  10+
-                </span>
-                <span className="font-sans text-[9px] lg:text-[11px] uppercase tracking-[0.2em] text-[#C8A977] mb-1 lg:mb-2">
-                  Years
-                </span>
-                <span className="font-sans text-[7px] lg:text-[9px] uppercase tracking-[0.3em] text-white/70">
-                  Perfection
-                </span>
+          {/* RIGHT COLUMN - Circular Diagram (approx 58%) */}
+          <div className="w-full xl:w-[58%] relative flex justify-center items-center h-[700px] xl:h-[800px] mt-20 xl:mt-0">
+            
+            {/* Center Area */}
+            <div className="relative w-[300px] h-[300px] md:w-[420px] md:h-[420px] z-10 flex items-center justify-center">
+              
+              {/* Soft Radial Light */}
+              <div className="absolute inset-0 bg-[#6B0F1A] blur-[100px] rounded-full opacity-10"></div>
+              
+              {/* Organic Burgundy Blob (SVG) */}
+              <div className="absolute w-[120%] h-[120%] z-0 text-[#4B080E] opacity-90" style={{ transform: 'rotate(15deg)' }}>
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-current">
+                  <path d="M42.7,-71.4C56,-65.7,67.7,-55,75.1,-41.8C82.5,-28.6,85.6,-13,84.4,2.3C83.2,17.6,77.7,32.6,69.5,45.3C61.2,58,50.1,68.4,37,74.9C23.9,81.4,8.8,84,-5.4,80.8C-19.6,77.6,-33,68.5,-44.6,58C-56.2,47.5,-66,35.6,-73,21.5C-80,7.3,-84.3,-9.1,-80.4,-23.4C-76.5,-37.7,-64.5,-49.9,-51,-55.8C-37.5,-61.7,-22.4,-61.3,-7.4,-57.4C7.6,-53.4,15.2,-45.8,29.4,-77.1Z" transform="translate(100 100)" />
+                </svg>
               </div>
+
+              {/* Circular Image */}
+              <div className="relative w-full h-full rounded-[40%] md:rounded-full overflow-hidden shadow-2xl z-10 border-[4px] border-[#F8F4EE]">
+                <img src={ourStoryImage} alt="Event Details" className="w-full h-full object-cover scale-110" />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
+            </div>
+
+            {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
+            <div className="absolute w-[450px] h-[450px] md:w-[620px] md:h-[620px] rounded-full border-[1.5px] border-dotted border-[#6B0F1A]/40 z-0 hidden md:block">
+              {/* Animated Traveling Dot */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="w-full h-full absolute inset-0"
+              >
+                <div className="absolute top-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#C8A56A] shadow-[0_0_10px_2px_rgba(200,165,106,0.6)]"></div>
+              </motion.div>
+
+              {/* Static tiny nodes at quarters */}
+              <div className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
+              <div className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
+              <div className="absolute left-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
+              <div className="absolute right-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
+            </div>
+
+            {/* Floating Cards (Absolute on md+, Stacked horizontally on mobile) */}
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 z-20 pointer-events-none hidden md:block"
+            >
+              {floatingCards.map((card, idx) => {
+                const angleRad = (card.angle * Math.PI) / 180;
+                const x = radius * Math.cos(angleRad);
+                const y = radius * Math.sin(angleRad);
+                
+                return (
+                  <div
+                    key={card.id}
+                    className="absolute top-1/2 left-1/2 w-[250px] pointer-events-auto z-20"
+                    style={{
+                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
+                    }}
+                  >
+                    {/* Counter-rotation to keep cards upright while the parent container orbits */}
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                      className="w-full h-full origin-center"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 + (idx * 0.1), ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="w-full bg-white rounded-[24px] p-[22px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
+                      >
+                        <div className="flex gap-4 items-start">
+                          <div className="w-10 h-10 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
+                            <card.icon className="w-4 h-4 text-white stroke-[2px]" />
+                          </div>
+                          <div className="flex flex-col mt-1">
+                            <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#6B0F1A] mb-1.5">
+                              {card.title}
+                            </h4>
+                            <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
+                              {card.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  </div>
+                );
+              })}
             </motion.div>
+            
+            {/* Mobile Cards (Horizontal Scroll) */}
+            <div className="absolute bottom-[-150px] left-0 w-full md:hidden flex overflow-x-auto gap-4 px-6 pb-10 snap-x hide-scrollbar pointer-events-auto z-30">
+              {floatingCards.map((card) => (
+                <div key={card.id} className="min-w-[240px] snap-center bg-white rounded-[20px] p-[20px] shadow-[0_15px_30px_-10px_rgba(107,15,26,0.08)]">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-10 h-10 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0">
+                      <card.icon className="w-4 h-4 text-white stroke-[2px]" />
+                    </div>
+                    <div className="flex flex-col mt-1">
+                      <h4 className="font-sans text-[11px] uppercase tracking-[0.15em] font-bold text-[#6B0F1A] mb-1.5">
+                        {card.title}
+                      </h4>
+                      <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
 
-        {/* Floating Glass Card */}
+        {/* BOTTOM FEATURE STRIP */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="relative z-30 w-full lg:w-[92%] mx-auto rounded-[36px] mt-12 lg:mt-[160px] mb-20 lg:mb-24 flex flex-col lg:flex-row overflow-hidden"
-          style={{
-            background: 'rgba(255,250,244,.92)',
-            backdropFilter: 'blur(20px)',
-            border: '1px solid rgba(180,160,130,.15)',
-            boxShadow: '0 25px 60px rgba(0,0,0,.08)'
-          }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full mt-32 md:mt-10 bg-white rounded-[24px] md:rounded-[32px] border border-[#6B0F1A]/20 shadow-[0_20px_50px_-20px_rgba(107,15,26,0.1)] p-8 md:p-12 xl:h-[180px] flex flex-col xl:flex-row items-center relative overflow-hidden"
         >
-          {/* 4 Columns (Stacks to 2x2 on tablet) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-full">
-            <div className="flex flex-col items-center justify-center p-8 lg:p-10 lg:border-r border-b lg:border-b-0 md:border-r border-[#C8A977]/20 relative group min-h-[220px] lg:min-h-[240px]">
-              <Lightbulb className="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] text-[#6E0F18] stroke-[1px] mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h5 className="font-sans text-[12px] lg:text-[13px] uppercase tracking-[0.18em] text-[#6E0F18] font-semibold mb-3 lg:mb-4 text-center">
-                Vision Driven
-              </h5>
-              <p className="font-sans text-[15px] lg:text-[16px] text-[#2B2B2B] text-center leading-relaxed">
-                We imagine beyond the ordinary to deliver exceptional experiences.
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-center justify-center p-8 lg:p-10 lg:border-r border-b lg:border-b-0 md:border-r-0 lg:border-r border-[#C8A977]/20 relative group min-h-[220px] lg:min-h-[240px]">
-              <Users className="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] text-[#6E0F18] stroke-[1px] mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h5 className="font-sans text-[12px] lg:text-[13px] uppercase tracking-[0.18em] text-[#6E0F18] font-semibold mb-3 lg:mb-4 text-center">
-                Client Focused
-              </h5>
-              <p className="font-sans text-[15px] lg:text-[16px] text-[#2B2B2B] text-center leading-relaxed">
-                Your dreams guide us.<br />Your satisfaction drives us.
-              </p>
-            </div>
+          {/* Subtle angled corner cuts (Chamfer illusion using absolute shapes) */}
+          <div className="absolute top-[-10px] left-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-b border-r border-[#6B0F1A]/20"></div>
+          <div className="absolute top-[-10px] right-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-b border-l border-[#6B0F1A]/20"></div>
+          <div className="absolute bottom-[-10px] left-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-t border-r border-[#6B0F1A]/20"></div>
+          <div className="absolute bottom-[-10px] right-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-t border-l border-[#6B0F1A]/20"></div>
 
-            <div className="flex flex-col items-center justify-center p-8 lg:p-10 lg:border-r border-b md:border-b-0 md:border-r border-[#C8A977]/20 relative group min-h-[220px] lg:min-h-[240px]">
-              <Gem className="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] text-[#6E0F18] stroke-[1px] mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h5 className="font-sans text-[12px] lg:text-[13px] uppercase tracking-[0.18em] text-[#6E0F18] font-semibold mb-3 lg:mb-4 text-center">
-                Detail Obsessed
-              </h5>
-              <p className="font-sans text-[15px] lg:text-[16px] text-[#2B2B2B] text-center leading-relaxed">
-                From the smallest detail to the grandest design, we perfect everything.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center p-8 lg:p-10 relative group min-h-[220px] lg:min-h-[240px]">
-              <Star className="w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] text-[#6E0F18] stroke-[1px] mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h5 className="font-sans text-[12px] lg:text-[13px] uppercase tracking-[0.18em] text-[#6E0F18] font-semibold mb-3 lg:mb-4 text-center">
-                Experience Makers
-              </h5>
-              <p className="font-sans text-[15px] lg:text-[16px] text-[#2B2B2B] text-center leading-relaxed">
-                We don&apos;t just plan events, we craft moments that live in memories forever.
-              </p>
-            </div>
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-0 relative z-10">
+            {featureStrips.map((feature, idx) => (
+              <div 
+                key={idx} 
+                className={`flex flex-col items-center text-center group cursor-pointer hover:-translate-y-2 transition-transform duration-400 ${
+                  idx !== featureStrips.length - 1 ? 'xl:border-r border-[#6B0F1A]/10' : ''
+                } px-4`}
+              >
+                <div className="w-10 h-10 rounded-full bg-[#F8F4EE] border border-[#6B0F1A]/20 flex items-center justify-center mb-4 group-hover:bg-[#6B0F1A] transition-colors duration-400">
+                  <feature.icon className="w-4 h-4 text-[#6B0F1A] group-hover:text-white transition-colors duration-400" />
+                </div>
+                <h5 className="font-sans text-[12px] uppercase tracking-[0.15em] text-[#6B0F1A] font-bold mb-3">
+                  {feature.title}
+                </h5>
+                <p className="font-sans text-[12px] text-gray-500 max-w-[220px] leading-relaxed mb-4">
+                  {feature.desc}
+                </p>
+                <div className="w-8 h-[1px] bg-[#6B0F1A]/30 group-hover:bg-[#C8A56A] group-hover:w-12 transition-all duration-400"></div>
+              </div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Bottom Asymmetric Grid */}
-        <div className="flex flex-col lg:flex-row gap-[30px] w-full lg:h-[520px]">
-          
-          {/* Card 1: 40% */}
-          <div className="w-full lg:w-[40%] h-[350px] lg:h-full rounded-[24px] overflow-hidden relative group">
-            <motion.img 
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              src={heroEventImage} 
-              alt="Luxury Stage"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
-          </div>
-
-          {/* Card 2: 25% */}
-          <div className="w-full lg:w-[25%] h-[400px] lg:h-full rounded-[24px] overflow-hidden relative group hidden md:block">
-            <motion.img 
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              src={ourStoryImage} 
-              alt="Luxury Dinner Details"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-700"></div>
-          </div>
-
-          {/* Card 3: 35% Quote Card */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-[35%] h-[350px] lg:h-full bg-gradient-to-br from-[#6E0F18] to-[#4B080E] rounded-[36px] p-10 lg:p-14 relative flex flex-col justify-center"
-            style={{
-              clipPath: 'polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%)'
-            }}
-          >
-            {/* Top Right Decorative Arc lines */}
-            <div className="absolute top-[-20%] right-[-20%] w-[80%] h-[80%] rounded-full border-[1px] border-white/10 pointer-events-none"></div>
-            <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full border-[1px] border-white/5 pointer-events-none"></div>
-
-            <span className="font-serif text-[#C8A977] text-[80px] lg:text-[90px] leading-none absolute top-4 left-6 lg:left-8 opacity-60">
-              &ldquo;
-            </span>
-            
-            <h4 className="font-serif text-[24px] lg:text-[32px] leading-[1.4] text-white mt-10 lg:mt-12 mb-8 lg:mb-16 relative z-10 max-w-[90%] lg:max-w-[85%]">
-              We believe events are not measured by their size, but by the emotions they create and the stories they inspire.
-            </h4>
-            
-            <div className="mt-auto pt-6 border-t border-white/20">
-              <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-white/70">
-                Team And Events Management
-              </span>
-            </div>
-          </motion.div>
-
-        </div>
-        
       </div>
     </section>
   );
