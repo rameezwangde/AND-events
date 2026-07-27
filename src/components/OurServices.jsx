@@ -12,7 +12,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-10 pb-8 lg:pt-10 lg:pb-8 px-6 lg:px-10">
+    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-0 pb-8 lg:pt-0 lg:pb-8 px-6 lg:px-10 -mt-10">
       
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.3] pointer-events-none"></div>
@@ -57,7 +57,7 @@ export default function OurServices() {
         </div>
 
         {/* RIGHT COLUMN - Moodboard Collage */}
-        <div className="w-full lg:w-[60%] relative lg:pt-[80px]">
+        <div className="w-full lg:w-[45%] lg:pr-10 relative lg:pt-[80px]">
           
           {/* Decorative Doodles */}
           <svg className="absolute top-[20%] left-[-5%] w-[80px] h-[80px] text-[#8A1C22] opacity-30 -rotate-12 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +68,7 @@ export default function OurServices() {
           </svg>
           <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-[#8A1C22] rounded-full opacity-20 hidden xl:block"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-6 xl:gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8 relative">
             
             {services.map((card, idx) => (
               <motion.div

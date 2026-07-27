@@ -22,7 +22,7 @@ export default function OurStory() {
   const radius = 280; // dotted circle radius
 
   return (
-    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-[80px] pb-10">
+    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-10 lg:pt-4 pb-0">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-[50vw] max-w-[400px] h-[50vw] max-h-[400px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50 md:top-5 md:left-5"></div>
@@ -32,7 +32,7 @@ export default function OurStory() {
       <div className="w-full px-8 lg:px-[65px] relative z-10">
         
         {/* Main 2-Column Layout */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-20 lg:gap-[40px] mb-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-20 lg:gap-[40px] mb-4">
           
           {/* LEFT COLUMN (approx 42%) */}
           <motion.div 
@@ -135,7 +135,7 @@ export default function OurStory() {
                 return (
                   <div
                     key={card.id}
-                    className="absolute top-1/2 left-1/2 w-[220px] pointer-events-auto z-20"
+                    className="absolute top-1/2 left-1/2 w-[185px] pointer-events-auto z-20"
                     style={{
                       transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
                     }}
@@ -151,11 +151,11 @@ export default function OurStory() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 + (idx * 0.1), ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="w-full bg-white rounded-[24px] p-[22px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
+                        className="w-full bg-white rounded-[20px] p-[16px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
                       >
-                        <div className="flex gap-4 items-start">
-                          <div className="w-10 h-10 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
-                            <card.icon className="w-4 h-4 text-white stroke-[2px]" />
+                        <div className="flex gap-3 items-start">
+                          <div className="w-8 h-8 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
+                            <card.icon className="w-3.5 h-3.5 text-white stroke-[2px]" />
                           </div>
                           <div className="flex flex-col mt-1">
                             <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#6B0F1A] mb-1.5">

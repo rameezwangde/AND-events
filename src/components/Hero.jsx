@@ -5,14 +5,14 @@ import HeroVisual from './HeroVisual';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[900px] bg-ivory overflow-hidden selection:bg-deep-maroon selection:text-white pb-20 lg:pb-0">
+    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-deep-maroon selection:text-white pb-10 lg:pb-0">
       <Header />
       
       {/* Background/Visual Layer */}
       <HeroVisual />
       
       {/* Left Content Area */}
-      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-[10vh] lg:pb-12">
+      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-10 lg:pb-0">
         <div className="max-w-[650px]">
           
           {/* Eyebrow */}

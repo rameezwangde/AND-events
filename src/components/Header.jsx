@@ -28,15 +28,7 @@ export default function Header() {
           WebkitBackdropFilter: 'blur(18px)'
         }}
       >
-        {/* Gold Architectural Detail Line */}
-        <div 
-          className="absolute top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#D4AF37]/40 to-transparent z-0 hidden lg:block"
-          style={{
-            left: '60.4%',
-            transform: 'skewX(-15deg)',
-            transformOrigin: 'top'
-          }}
-        />
+
 
         {/* Logo */}
         <a href="#" className="relative z-10 flex flex-col items-start w-[130px] lg:w-[150px]">
