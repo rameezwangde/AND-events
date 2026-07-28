@@ -63,8 +63,8 @@ export default function OurStory() {
             </div>
 
             {/* Paragraph */}
-            <p className="font-sans text-[#555] text-[16px] md:text-[18px] leading-[1.9] max-w-[460px] mb-12">
-              AND Events Management was born from a simple belief – that every celebration is unique and every detail matters. What started as a passion for creating unforgettable experiences has grown into a full-service event management company trusted by clients across Dubai.<br /><br />
+            <p className="font-sans text-[#555] text-[16px] md:text-[18px] leading-[1.9] max-w-[460px] mb-12 text-justify">
+              AND Events Management was born from a simple belief – that every celebration is unique and every detail matters. What started as a passion for unforgettable experiences has grown into a full-service event management company trusted by clients across Dubai.<br /><br />
               With creativity at our core and perfection in our process, we transform ideas into extraordinary events that leave lasting impressions.
             </p>
 
