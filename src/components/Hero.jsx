@@ -1,91 +1,139 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
 import Header from './Header';
 import HeroVisual from './HeroVisual';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-logo-red selection:text-white pb-16 lg:pb-20">
+    <section className="relative w-full bg-[#f7f2eb] overflow-hidden selection:bg-[#980b0b] selection:text-white flex flex-col lg:flex-row" style={{ minHeight: 'calc(100vh - 88px)' }}>
       <Header />
 
-      {/* Background/Visual Layer */}
-      <HeroVisual />
-
-      {/* Left Content Area */}
-      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-16 lg:pb-20">
-        <div className="max-w-[650px]">
-
-          {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="flex items-center gap-4 mb-10"
-          >
-            <div className="w-[1px] h-10 bg-logo-red"></div>
-            <div className="font-sans text-[11px] lg:text-xs uppercase tracking-[0.2em] font-medium text-logo-red leading-loose">
-              Not Just Events.<br />Unforgettable Experiences.
-            </div>
-          </motion.div>
-
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="font-serif text-6xl lg:text-[84px] leading-[0.92] tracking-tight mb-10"
-          >
-            <span className="block text-black">We Don&apos;t Do</span>
-            <span className="block text-black">Ordinary.</span>
-            <span className="block text-logo-red">We Create</span>
-            <span className="block text-logo-red">Extraordinary.</span>
-          </motion.h1>
-
-          {/* Decorative Divider */}
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: 70 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-            className="h-[1px] bg-logo-red mb-10"
-          ></motion.div>
-
-          {/* Paragraph */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
-            className="font-sans text-muted-black text-base lg:text-[17px] leading-relaxed max-w-[460px] mb-12"
-          >
-            End-to-end event management in Dubai delivering seamless planning, creative production and unforgettable moments.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-5"
-          >
-            <a
-              href="#services"
-              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
-            >
-              Explore Services
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
-            </a>
-
-            <a
-              href="#contact"
-              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
-            >
-              Contact Us
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
-            </a>
-          </motion.div>
-
-        </div>
+      {/* Decorative Background (Subtle Contour Lines) */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" className="w-full h-full stroke-[#b98f68] fill-none" strokeWidth="1">
+          <path d="M-100,500 Q200,300 500,500 T1100,500" />
+          <path d="M-100,600 Q200,400 500,600 T1100,600" />
+          <path d="M-100,700 Q200,500 500,700 T1100,700" />
+          <path d="M-100,800 Q200,600 500,800 T1100,800" />
+          <path d="M-100,400 Q200,200 500,400 T1100,400" />
+        </svg>
       </div>
+
+      {/* Left Content Area (47% width on desktop) */}
+      <div 
+        className="relative z-20 w-full lg:w-[47%] min-h-[60vh] lg:h-full flex flex-col pb-16 lg:pb-20"
+        style={{
+          paddingLeft: 'clamp(70px, 5vw, 110px)',
+          paddingTop: 'calc(88px + clamp(40px, 5vh, 60px))'
+        }}
+      >
+        
+        {/* Eyebrow */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="mb-8 lg:mb-12"
+        >
+          <div 
+            className="font-sans uppercase text-[#171515]"
+            style={{ fontSize: '12px', letterSpacing: '0.24em', lineHeight: '1.8' }}
+          >
+            Not Just Events.<br />Unforgettable Experiences.
+          </div>
+        </motion.div>
+
+        {/* Headline */}
+        <div 
+          className="mb-8 font-serif"
+          style={{ 
+            fontFamily: '"Cormorant Garamond", "Bodoni Moda", serif',
+            fontSize: 'clamp(64px, 5.1vw, 94px)',
+            lineHeight: 0.94,
+            letterSpacing: '-0.045em'
+          }}
+        >
+          <div className="overflow-hidden">
+            <motion.span 
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[#171515]"
+            >
+              We Don't Do
+            </motion.span>
+          </div>
+          <div className="overflow-hidden">
+            <motion.span 
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[#171515]"
+            >
+              Ordinary.
+            </motion.span>
+          </div>
+          <div className="overflow-hidden">
+            <motion.span 
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[#991313]"
+            >
+              We Create
+            </motion.span>
+          </div>
+          <div className="overflow-hidden">
+            <motion.span 
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.2, delay: 0.95, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[#991313]"
+            >
+              Extraordinary.
+            </motion.span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.4, ease: "easeOut" }}
+          className="font-sans text-[#4A4A4A]"
+          style={{ maxWidth: '440px', fontSize: '18px', lineHeight: 1.65 }}
+        >
+          End-to-end event management in Dubai delivering seamless planning, creative production, and breathtaking moments.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row items-center gap-5 mt-10"
+        >
+          <a
+            href="#services"
+            className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-[#980b0b] text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
+          >
+            Explore Services
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+
+          <a
+            href="#contact"
+            className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-[#980b0b] text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
+          >
+            Contact Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </motion.div>
+      </div>
+
+      {/* Right Visual Layer (53% width on desktop) */}
+      <HeroVisual />
 
     </section>
   );
 }
+
