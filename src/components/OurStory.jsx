@@ -11,12 +11,7 @@ const floatingCards = [
   { id: 6, title: 'CLIENT FOCUSED', desc: 'Your vision, preferences, and satisfaction guide everything we do.', icon: Briefcase, angle: -150 },
 ];
 
-const featureStrips = [
-  { title: 'VISION DRIVEN', desc: 'We imagine beyond the ordinary to deliver exceptional experiences.', icon: Lightbulb },
-  { title: 'CLIENT FOCUSED', desc: 'Your dreams guide us. Your satisfaction drives us.', icon: Users },
-  { title: 'DETAIL OBSESSED', desc: 'From the smallest detail to the grandest design, we perfect everything.', icon: Gem },
-  { title: 'EXPERIENCE MAKERS', desc: 'We don\'t just plan events, we craft moments that live in memories forever.', icon: Star },
-];
+
 
 export default function OurStory() {
   const radius = 280; // dotted circle radius
@@ -197,33 +192,7 @@ export default function OurStory() {
           </div>
         </div>
 
-        {/* BOTTOM FEATURE STRIP */}
-        <div className="w-full mt-32 md:mt-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 relative z-10">
-          {featureStrips.map((feature, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 * idx, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="group flex flex-col items-center text-center bg-[#6E0F18] hover:bg-[#4B080E] border border-[#C8A56A]/20 hover:border-[#C8A56A]/60 rounded-2xl p-8 xl:p-10 shadow-lg hover:shadow-[0_20px_40px_-15px_rgba(43,4,8,0.6)] transition-all duration-500 cursor-pointer"
-            >
-              <div className="relative w-16 h-16 mb-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-white/5 rounded-full scale-100 group-hover:scale-[1.8] transition-transform duration-700 ease-out opacity-100 group-hover:opacity-0"></div>
-                <div className="relative w-14 h-14 rounded-full bg-white/10 shadow-inner flex items-center justify-center group-hover:bg-white/20 transition-colors duration-500 border border-white/5">
-                  <feature.icon className="w-5 h-5 text-white transition-colors duration-500 stroke-[1.5px]" />
-                </div>
-              </div>
-              <h5 className="font-sans text-[13px] uppercase tracking-[0.2em] text-white font-bold mb-4">
-                {feature.title}
-              </h5>
-              <div className="w-6 h-[1px] bg-[#C8A56A]/50 mb-5 group-hover:w-12 transition-all duration-500"></div>
-              <p className="font-sans text-[13px] text-white/70 leading-[1.8] mb-0 group-hover:text-white/90 transition-colors duration-500">
-                {feature.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+
 
       </div>
     </section>
