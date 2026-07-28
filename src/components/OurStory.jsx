@@ -17,7 +17,7 @@ export default function OurStory() {
   const radius = 280; // dotted circle radius
 
   return (
-    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6E0F18] selection:text-white pt-10 lg:pt-4 pb-0">
+    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#930708] selection:text-white pt-10 lg:pt-4 pb-0">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-[50vw] max-w-[400px] h-[50vw] max-h-[400px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50 md:top-5 md:left-5"></div>
@@ -39,27 +39,27 @@ export default function OurStory() {
           >
             {/* Eyebrow */}
             <div className="flex flex-col items-start mb-8">
-              <span className="font-sans text-[14px] md:text-[16px] uppercase tracking-[0.25em] text-[#6E0F18] font-bold mb-3">
+              <span className="font-sans text-[14px] md:text-[16px] uppercase tracking-[0.25em] text-[#930708] font-bold mb-3">
                 Our Story
               </span>
               <div className="flex items-center w-full max-w-[100px]">
-                <div className="flex-1 h-[1px] bg-[#6E0F18]/30"></div>
-                <div className="w-[6px] h-[6px] border border-[#6E0F18]/50 rotate-45 mx-2"></div>
-                <div className="flex-1 h-[1px] bg-[#6E0F18]/30"></div>
+                <div className="flex-1 h-[1px] bg-[#930708]/30"></div>
+                <div className="w-[6px] h-[6px] border border-[#930708]/50 rotate-45 mx-2"></div>
+                <div className="flex-1 h-[1px] bg-[#930708]/30"></div>
               </div>
             </div>
 
             {/* Main Heading */}
             <h2 className="font-serif text-[36px] md:text-[48px] xl:text-[56px] leading-[1.05] mb-10 ml-[-2px] md:ml-[-4px]">
               <span className="block text-black font-medium">Crafting Moments.</span>
-              <span className="block text-[#6E0F18] font-medium">Creating Legacies.</span>
+              <span className="block text-[#930708] font-medium">Creating Legacies.</span>
             </h2>
 
             {/* Decorative divider under heading */}
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-[40px] h-[1px] bg-[#6E0F18]/30"></div>
+              <div className="w-[40px] h-[1px] bg-[#930708]/30"></div>
               <div className="w-[4px] h-[4px] rounded-full bg-[#C8A56A]"></div>
-              <div className="w-[100px] h-[1px] bg-gradient-to-r from-[#6E0F18]/30 to-transparent"></div>
+              <div className="w-[100px] h-[1px] bg-gradient-to-r from-[#930708]/30 to-transparent"></div>
             </div>
 
             {/* Paragraph */}
@@ -69,7 +69,7 @@ export default function OurStory() {
             </p>
 
             {/* Outline Button */}
-            <a href="#journey" className="flex items-center justify-between w-max gap-6 h-[54px] bg-white text-[#6E0F18] border border-[#6E0F18] font-sans text-[12px] uppercase tracking-[0.15em] font-bold px-8 rounded-sm hover:bg-[#6E0F18] hover:text-white transition-all duration-400 group shadow-md hover:shadow-xl">
+            <a href="#journey" className="flex items-center justify-between w-max gap-6 h-[54px] bg-white text-[#930708] border border-[#930708] font-sans text-[12px] uppercase tracking-[0.15em] font-bold px-8 rounded-sm hover:bg-[#930708] hover:text-white transition-all duration-400 group shadow-md hover:shadow-xl">
               Discover Our Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-400" strokeWidth={1.5} />
             </a>
@@ -82,10 +82,10 @@ export default function OurStory() {
             <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] z-10 flex items-center justify-center">
               
               {/* Soft Radial Light */}
-              <div className="absolute inset-0 bg-[#6E0F18] blur-[100px] rounded-full opacity-10"></div>
+              <div className="absolute inset-0 bg-[#930708] blur-[100px] rounded-full opacity-10"></div>
               
               {/* Organic Burgundy Blob (SVG) */}
-              <div className="absolute w-[120%] h-[120%] z-0 text-[#4B080E] opacity-90" style={{ transform: 'rotate(15deg)' }}>
+              <div className="absolute w-[120%] h-[120%] z-0 text-[#7A0507] opacity-90" style={{ transform: 'rotate(15deg)' }}>
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-current">
                   <path d="M42.7,-71.4C56,-65.7,67.7,-55,75.1,-41.8C82.5,-28.6,85.6,-13,84.4,2.3C83.2,17.6,77.7,32.6,69.5,45.3C61.2,58,50.1,68.4,37,74.9C23.9,81.4,8.8,84,-5.4,80.8C-19.6,77.6,-33,68.5,-44.6,58C-56.2,47.5,-66,35.6,-73,21.5C-80,7.3,-84.3,-9.1,-80.4,-23.4C-76.5,-37.7,-64.5,-49.9,-51,-55.8C-37.5,-61.7,-22.4,-61.3,-7.4,-57.4C7.6,-53.4,15.2,-45.8,29.4,-77.1Z" transform="translate(100 100)" />
                 </svg>
@@ -99,7 +99,7 @@ export default function OurStory() {
             </div>
 
             {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
-            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#6E0F18]/40 z-0 hidden md:block">
+            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#930708]/40 z-0 hidden md:block">
               {/* Animated Traveling Dot */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -110,10 +110,10 @@ export default function OurStory() {
               </motion.div>
 
               {/* Static tiny nodes at quarters */}
-              <div className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
-              <div className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
-              <div className="absolute left-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
-              <div className="absolute right-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
+              <div className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#930708]"></div>
+              <div className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#930708]"></div>
+              <div className="absolute left-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#930708]"></div>
+              <div className="absolute right-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#930708]"></div>
             </div>
 
             {/* Floating Cards (Absolute on md+, Stacked horizontally on mobile) */}
@@ -149,11 +149,11 @@ export default function OurStory() {
                         className="w-full bg-white rounded-[20px] p-[16px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
                       >
                         <div className="flex gap-3 items-start">
-                          <div className="w-8 h-8 rounded-full bg-[#6E0F18] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
+                          <div className="w-8 h-8 rounded-full bg-[#930708] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
                             <card.icon className="w-3.5 h-3.5 text-white stroke-[2px]" />
                           </div>
                           <div className="flex flex-col mt-1">
-                            <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#6E0F18] mb-1.5">
+                            <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#930708] mb-1.5">
                               {card.title}
                             </h4>
                             <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
@@ -173,11 +173,11 @@ export default function OurStory() {
               {floatingCards.map((card) => (
                 <div key={card.id} className="min-w-[240px] snap-center bg-white rounded-[20px] p-[20px] shadow-[0_15px_30px_-10px_rgba(107,15,26,0.08)]">
                   <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#6E0F18] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#930708] flex items-center justify-center shrink-0">
                       <card.icon className="w-4 h-4 text-white stroke-[2px]" />
                     </div>
                     <div className="flex flex-col mt-1">
-                      <h4 className="font-sans text-[11px] uppercase tracking-[0.15em] font-bold text-[#6E0F18] mb-1.5">
+                      <h4 className="font-sans text-[11px] uppercase tracking-[0.15em] font-bold text-[#930708] mb-1.5">
                         {card.title}
                       </h4>
                       <p className="font-sans text-[12px] text-gray-500 leading-relaxed">

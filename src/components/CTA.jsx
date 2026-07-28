@@ -12,7 +12,7 @@ export default function CTA() {
       ></div>
       
       {/* Dark Red Color Overlay */}
-      <div className="absolute inset-0 bg-[#6E0F18]/90"></div>
+      <div className="absolute inset-0 bg-[#930708]/90"></div>
       
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none mix-blend-overlay"></div>
@@ -42,7 +42,7 @@ export default function CTA() {
 
           <a 
             href="#contact" 
-            className="flex items-center justify-between w-[220px] h-[56px] bg-white text-[#6E0F18] font-sans text-[11px] uppercase tracking-widest font-bold px-8 rounded-sm hover:bg-gray-100 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all group duration-300"
+            className="flex items-center justify-between w-[220px] h-[56px] bg-white text-[#930708] font-sans text-[11px] uppercase tracking-widest font-bold px-8 rounded-sm hover:bg-gray-100 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all group duration-300"
           >
             Start a Project
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />

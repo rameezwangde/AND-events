@@ -16,7 +16,7 @@ const testimonials2 = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full bg-[#FBF9F6] border-y border-[#6E0F18]/10 overflow-hidden selection:bg-[#6E0F18] selection:text-white pt-12 pb-10 lg:pt-16 lg:pb-16">
+    <section className="relative w-full bg-[#FBF9F6] border-y border-[#930708]/10 overflow-hidden selection:bg-[#930708] selection:text-white pt-12 pb-10 lg:pt-16 lg:pb-16">
       
       {/* Custom Styles for Infinite Marquee */}
       <style>{`
@@ -42,16 +42,16 @@ export default function Testimonials() {
 
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.4] pointer-events-none"></div>
-      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#6E0F18] blur-[150px] rounded-full opacity-[0.03] pointer-events-none"></div>
+      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#930708] blur-[150px] rounded-full opacity-[0.03] pointer-events-none"></div>
       <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[white] blur-[150px] rounded-full opacity-[0.05] pointer-events-none"></div>
 
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 relative z-10 mb-20 text-center">
         <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="w-[30px] h-[1px] bg-[#6E0F18]/30"></div>
-          <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#6E0F18]">
+          <div className="w-[30px] h-[1px] bg-[#930708]/30"></div>
+          <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#930708]">
             Client Stories
           </span>
-          <div className="w-[30px] h-[1px] bg-[#6E0F18]/30"></div>
+          <div className="w-[30px] h-[1px] bg-[#930708]/30"></div>
         </div>
 
         <h2 className="font-serif text-[36px] md:text-[44px] text-[#1B1B1B] leading-tight">
@@ -65,7 +65,7 @@ export default function Testimonials() {
         <div className="w-full overflow-hidden flex">
           <div className="flex w-max animate-marquee-left items-center">
             {[...testimonials1, ...testimonials1].map((item, idx) => (
-              <div key={`row1-${idx}`} className="w-[350px] md:w-[500px] mx-4 md:mx-6 flex-shrink-0 whitespace-normal group bg-[#6E0F18] p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(43,4,8,0.3)] hover:-translate-y-2 transition-transform duration-500 rounded-sm">
+              <div key={`row1-${idx}`} className="w-[350px] md:w-[500px] mx-4 md:mx-6 flex-shrink-0 whitespace-normal group bg-[#930708] p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(43,4,8,0.3)] hover:-translate-y-2 transition-transform duration-500 rounded-sm">
                 <div className="flex flex-col">
                   <div className="text-[50px] md:text-[60px] text-[white] font-serif leading-none h-[30px] md:h-[40px] opacity-40 group-hover:opacity-100 transition-opacity duration-500">"</div>
                   <p className="text-[20px] md:text-[24px] text-[#F8F3EE] font-serif leading-[1.5] mb-8">
@@ -88,7 +88,7 @@ export default function Testimonials() {
         <div className="w-full overflow-hidden flex">
           <div className="flex w-max animate-marquee-right items-center">
             {[...testimonials2, ...testimonials2].map((item, idx) => (
-              <div key={`row2-${idx}`} className="w-[350px] md:w-[500px] mx-4 md:mx-6 flex-shrink-0 whitespace-normal group bg-[#6E0F18] p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(43,4,8,0.3)] hover:-translate-y-2 transition-transform duration-500 rounded-sm">
+              <div key={`row2-${idx}`} className="w-[350px] md:w-[500px] mx-4 md:mx-6 flex-shrink-0 whitespace-normal group bg-[#930708] p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(43,4,8,0.3)] hover:-translate-y-2 transition-transform duration-500 rounded-sm">
                 <div className="flex flex-col">
                   <div className="text-[50px] md:text-[60px] text-[white] font-serif leading-none h-[30px] md:h-[40px] opacity-40 group-hover:opacity-100 transition-opacity duration-500">"</div>
                   <p className="text-[20px] md:text-[24px] text-[#F8F3EE] font-serif leading-[1.5] mb-8">
