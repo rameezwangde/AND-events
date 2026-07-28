@@ -12,7 +12,7 @@ export default function CTA() {
       ></div>
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/95"></div>
+      <div className="absolute inset-0 bg-black/75"></div>
       
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none mix-blend-overlay"></div>

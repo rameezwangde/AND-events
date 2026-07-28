@@ -3,18 +3,18 @@ import { ArrowRight, Lightbulb, Star, Users, Flame, Settings, Briefcase, Gem } f
 import ourStoryImage from '../assets/our-story-image.png';
 
 const floatingCards = [
-  { id: 1, title: 'CREATIVE VISION', desc: 'We bring imagination to life with concepts that are fresh, impactful, and memorable.', icon: Lightbulb, angle: -90 },
-  { id: 2, title: 'DETAIL PERFECTION', desc: 'From the smallest detail to the grandest setup, we leave nothing to chance.', icon: Star, angle: -30 },
-  { id: 3, title: 'EXPERIENCE MAKERS', desc: 'We don\'t just plan events, we craft experiences that people remember forever.', icon: Users, angle: 30 },
-  { id: 4, title: 'PASSION DRIVEN', desc: 'Our passion fuels every event we create and every client relationship we build.', icon: Flame, angle: 90 },
-  { id: 5, title: 'SEAMLESS EXECUTION', desc: 'With a dedicated team and proven process, we ensure every event runs flawlessly.', icon: Settings, angle: 150 },
+  { id: 1, title: 'CREATIVE VISION', desc: 'Bringing imagination to life with fresh, memorable concepts.', icon: Lightbulb, angle: -90 },
+  { id: 2, title: 'DETAIL PERFECTION', desc: 'Leaving nothing to chance, from fine details to grand setups.', icon: Star, angle: -30 },
+  { id: 3, title: 'EXPERIENCE MAKERS', desc: 'Crafting extraordinary experiences that people remember forever.', icon: Users, angle: 30 },
+  { id: 4, title: 'PASSION DRIVEN', desc: 'Our passion fuels every event and client relationship we build.', icon: Flame, angle: 90 },
+  { id: 5, title: 'SEAMLESS EXECUTION', desc: 'Ensuring flawless execution with our dedicated expert team.', icon: Settings, angle: 150 },
   { id: 6, title: 'CLIENT FOCUSED', desc: 'Your vision, preferences, and satisfaction guide everything we do.', icon: Briefcase, angle: -150 },
 ];
 
 
 
 export default function OurStory() {
-  const radius = 280; // dotted circle radius
+  const radius = 320; // dotted circle radius
 
   return (
     <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#930708] selection:text-white pt-10 lg:pt-4 pb-0">
@@ -99,7 +99,7 @@ export default function OurStory() {
             </div>
 
             {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
-            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#930708]/40 z-0 hidden md:block">
+            <div className="absolute w-[400px] h-[400px] md:w-[640px] md:h-[640px] rounded-full border-[1.5px] border-dotted border-[#930708]/40 z-0 hidden md:block">
               {/* Animated Traveling Dot */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -146,7 +146,7 @@ export default function OurStory() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 + (idx * 0.1), ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="w-full bg-white rounded-[20px] p-[16px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
+                        className="w-full bg-white rounded-[16px] px-[14px] py-[12px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
                       >
                         <div className="flex gap-3 items-start">
                           <div className="w-8 h-8 rounded-full bg-[#930708] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
@@ -171,7 +171,7 @@ export default function OurStory() {
             {/* Mobile Cards (Horizontal Scroll) */}
             <div className="absolute bottom-[-150px] left-0 w-full md:hidden flex overflow-x-auto gap-4 px-6 pb-10 snap-x hide-scrollbar pointer-events-auto z-30">
               {floatingCards.map((card) => (
-                <div key={card.id} className="min-w-[240px] snap-center bg-white rounded-[20px] p-[20px] shadow-[0_15px_30px_-10px_rgba(107,15,26,0.08)]">
+                <div key={card.id} className="min-w-[240px] snap-center bg-white rounded-[16px] px-[16px] py-[14px] shadow-[0_15px_30px_-10px_rgba(107,15,26,0.08)]">
                   <div className="flex gap-4 items-start">
                     <div className="w-10 h-10 rounded-full bg-[#930708] flex items-center justify-center shrink-0">
                       <card.icon className="w-4 h-4 text-white stroke-[2px]" />

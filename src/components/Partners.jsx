@@ -76,7 +76,7 @@ export default function Partners() {
           </div>
 
           {/* 3D Stone Podium/Shelf */}
-          <div className="w-[110%] max-w-[1000px] h-[50px] md:h-[80px] bg-gradient-to-b from-[#2B0408] to-[#1A0204] rounded-[50%] mt-[-20px] md:mt-[-30px] relative z-10 shadow-[0_30px_60px_rgba(0,0,0,0.4)] flex items-start justify-center">
+          <div className="w-[110%] max-w-[1000px] h-[50px] md:h-[80px] bg-gradient-to-b from-[#930708] to-[#6d0506] rounded-[50%] mt-[-20px] md:mt-[-30px] relative z-10 shadow-[0_30px_60px_rgba(0,0,0,0.4)] flex items-start justify-center">
             {/* Edge reflection */}
             <div className="w-[80%] h-[2px] bg-gradient-to-r from-transparent via-[#F8F3EE] to-transparent opacity-30 mt-1"></div>
             {/* Shelf bottom depth bevel */}
