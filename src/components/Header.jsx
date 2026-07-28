@@ -19,10 +19,10 @@ export default function Header() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute top-0 left-0 w-full h-[90px] lg:h-[100px] z-50 flex items-center justify-between px-6 lg:px-[60px]"
+        className="fixed top-0 left-0 w-full h-[90px] lg:h-[100px] z-50 flex items-center justify-between px-6 lg:px-[60px]"
         style={{ 
-          borderBottom: '1px solid rgba(120,90,70,.08)',
-          background: 'rgba(246,241,232,0.95)',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          background: 'rgba(147, 7, 8, 0.98)',
           backdropFilter: 'blur(18px)',
           WebkitBackdropFilter: 'blur(18px)'
         }}
@@ -41,12 +41,12 @@ export default function Header() {
               key={link.name}
               href="#"
               className={`relative font-sans text-[15px] font-medium tracking-[0.08em] uppercase py-2 group transition-colors ${
-                link.active ? 'text-deep-maroon' : 'text-black/80 hover:text-deep-maroon'
+                link.active ? 'text-white' : 'text-white/70 hover:text-white'
               }`}
             >
               {link.name}
               <span 
-                className={`absolute left-0 bottom-0 h-[1px] bg-deep-maroon transition-all duration-400 ease-out ${
+                className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-400 ease-out ${
                   link.active ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}
               />
@@ -59,7 +59,7 @@ export default function Header() {
           {/* CTA Button only on Desktop */}
           <a 
             href="#contact" 
-            className="hidden lg:flex items-center justify-center bg-deep-maroon text-white px-8 py-3.5 rounded-full font-sans text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-dark-maroon hover:scale-105 transition-all duration-300"
+            className="hidden lg:flex items-center justify-center bg-white text-logo-red px-8 py-3.5 rounded-full font-sans text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-gray-100 hover:scale-105 transition-all duration-300"
           >
             Let's Create Magic
           </a>
@@ -67,11 +67,11 @@ export default function Header() {
           {/* Mobile Hamburger Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
-            className="lg:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full transition-all duration-300 group hover:scale-105 hover:bg-deep-maroon"
-            style={{ border: '1px solid rgba(90,60,40,.18)' }}
+            className="lg:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full transition-all duration-300 group hover:scale-105 hover:bg-white/10"
+            style={{ border: '1px solid rgba(255,255,255,.2)' }}
             aria-label="Menu"
           >
-            <Menu className="w-5 h-5 text-deep-maroon group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+            <Menu className="w-5 h-5 text-white transition-colors duration-300" strokeWidth={1.5} />
           </button>
         </div>
       </motion.header>
@@ -89,7 +89,7 @@ export default function Header() {
             {/* Close Button */}
             <button 
               onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-8 right-6 w-12 h-12 flex items-center justify-center rounded-full border border-deep-maroon/20 text-deep-maroon hover:bg-deep-maroon hover:text-white transition-colors"
+              className="absolute top-8 right-6 w-12 h-12 flex items-center justify-center rounded-full border border-logo-red/20 text-logo-red hover:bg-logo-red hover:text-white transition-colors"
             >
               <X className="w-6 h-6" strokeWidth={1.5} />
             </button>
@@ -104,7 +104,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 + 0.2 }}
                   className={`font-serif text-4xl font-medium tracking-wide ${
-                    link.active ? 'text-deep-maroon' : 'text-black/70'
+                    link.active ? 'text-logo-red' : 'text-black/70'
                   }`}
                 >
                   {link.name}
@@ -116,7 +116,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.1 + 0.2 }}
-                className="mt-4 font-sans text-xs tracking-[0.2em] uppercase font-bold text-deep-maroon"
+                className="mt-4 font-sans text-xs tracking-[0.2em] uppercase font-bold text-logo-red"
               >
                 Let's Create Magic &rarr;
               </motion.a>

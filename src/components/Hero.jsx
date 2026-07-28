@@ -5,7 +5,7 @@ import HeroVisual from './HeroVisual';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-deep-maroon selection:text-white pb-10 lg:pb-0">
+    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-logo-red selection:text-white pb-10 lg:pb-0">
       <Header />
       
       {/* Background/Visual Layer */}
@@ -22,8 +22,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="flex items-center gap-4 mb-10"
           >
-            <div className="w-[1px] h-10 bg-deep-maroon"></div>
-            <div className="font-sans text-[11px] lg:text-xs uppercase tracking-[0.2em] font-medium text-deep-maroon leading-loose">
+            <div className="w-[1px] h-10 bg-logo-red"></div>
+            <div className="font-sans text-[11px] lg:text-xs uppercase tracking-[0.2em] font-medium text-logo-red leading-loose">
               Not Just Events.<br />Unforgettable Experiences.
             </div>
           </motion.div>
@@ -37,8 +37,8 @@ export default function Hero() {
           >
             <span className="block text-black">We Don&apos;t Do</span>
             <span className="block text-black">Ordinary.</span>
-            <span className="block text-deep-maroon">We Create</span>
-            <span className="block text-deep-maroon">Extraordinary.</span>
+            <span className="block text-logo-red">We Create</span>
+            <span className="block text-logo-red">Extraordinary.</span>
           </motion.h1>
 
           {/* Decorative Divider */}
@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ width: 0 }}
             animate={{ width: 70 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-            className="h-[1px] bg-deep-maroon mb-10"
+            className="h-[1px] bg-logo-red mb-10"
           ></motion.div>
 
           {/* Paragraph */}
@@ -68,7 +68,7 @@ export default function Hero() {
           >
             <a 
               href="#services" 
-              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-deep-maroon text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-dark-maroon transition-colors group"
+              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
             >
               Explore Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
@@ -76,7 +76,7 @@ export default function Hero() {
             
             <a 
               href="#contact" 
-              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-deep-maroon text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-dark-maroon transition-colors group"
+              className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
             >
               Contact Us
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
