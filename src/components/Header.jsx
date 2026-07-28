@@ -15,12 +15,12 @@ export default function Header() {
 
   return (
     <>
-      <motion.header 
+      <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 left-0 w-full h-[90px] lg:h-[100px] z-50 flex items-center justify-between px-6 lg:px-[60px]"
-        style={{ 
+        style={{
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           background: 'rgba(147, 7, 8, 0.98)',
           backdropFilter: 'blur(18px)',
@@ -40,15 +40,13 @@ export default function Header() {
             <a
               key={link.name}
               href="#"
-              className={`relative font-sans text-[15px] font-medium tracking-[0.08em] uppercase py-2 group transition-colors ${
-                link.active ? 'text-white' : 'text-white/70 hover:text-white'
-              }`}
+              className={`relative font-sans text-[15px] font-medium tracking-[0.08em] uppercase py-2 group transition-colors ${link.active ? 'text-white' : 'text-white/70 hover:text-white'
+                }`}
             >
               {link.name}
-              <span 
-                className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-400 ease-out ${
-                  link.active ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}
+              <span
+                className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-400 ease-out ${link.active ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
               />
             </a>
           ))}
@@ -57,15 +55,15 @@ export default function Header() {
         {/* Right CTA / Menu */}
         <div className="relative z-10 flex items-center gap-6">
           {/* CTA Button only on Desktop */}
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             className="hidden lg:flex items-center justify-center bg-white text-logo-red px-8 py-3.5 rounded-full font-sans text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-gray-100 hover:scale-105 transition-all duration-300"
           >
             Let's Create Magic
           </a>
-          
+
           {/* Mobile Hamburger Button */}
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(true)}
             className="lg:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full transition-all duration-300 group hover:scale-105 hover:bg-white/10"
             style={{ border: '1px solid rgba(255,255,255,.2)' }}
@@ -79,7 +77,7 @@ export default function Header() {
       {/* Fullscreen Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: '-100%' }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '-100%' }}
@@ -87,13 +85,13 @@ export default function Header() {
             className="fixed inset-0 z-[100] bg-ivory flex flex-col justify-center px-8"
           >
             {/* Close Button */}
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-8 right-6 w-12 h-12 flex items-center justify-center rounded-full border border-logo-red/20 text-logo-red hover:bg-logo-red hover:text-white transition-colors"
             >
               <X className="w-6 h-6" strokeWidth={1.5} />
             </button>
-            
+
             <nav className="flex flex-col gap-8">
               {navLinks.map((link, i) => (
                 <motion.a
@@ -103,9 +101,8 @@ export default function Header() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 + 0.2 }}
-                  className={`font-serif text-4xl font-medium tracking-wide ${
-                    link.active ? 'text-logo-red' : 'text-black/70'
-                  }`}
+                  className={`font-serif text-4xl font-medium tracking-wide ${link.active ? 'text-logo-red' : 'text-black/70'
+                    }`}
                 >
                   {link.name}
                 </motion.a>

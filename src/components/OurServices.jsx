@@ -22,12 +22,10 @@ export default function OurServices() {
         {/* LEFT COLUMN */}
         <div className="w-full lg:w-[40%] flex flex-col lg:sticky lg:top-[120px]">
           
-          <div className="flex items-center gap-4 mb-6">
-            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#930708] translate-y-[12px]">
+          <div className="flex items-center gap-4 mb-6 -mt-4 lg:-mt-8">
+            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#930708]">
               Our Services
             </span>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#930708] opacity-50"></div>
-            <div className="flex-1 h-[1px] bg-[#930708]/20"></div>
           </div>
 
           <h2 className="font-serif text-[48px] md:text-[64px] leading-[1.05] tracking-tight mb-6">

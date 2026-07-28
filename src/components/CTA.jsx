@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="relative w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] max-w-[1300px] mx-auto mt-8 lg:mt-12 mb-16 lg:mb-28 py-24 lg:py-32 overflow-hidden rounded-[2rem] lg:rounded-[3rem] shadow-[0_20px_50px_rgba(138,28,34,0.2)]">
+    <section className="relative w-full py-24 lg:py-32 overflow-hidden">
       
       {/* Background Image */}
       <div 
@@ -11,8 +11,8 @@ export default function CTA() {
         style={{ backgroundImage: "url('https://festivation.com/images/dubai-festivals.webp')" }}
       ></div>
       
-      {/* Dark Red Color Overlay */}
-      <div className="absolute inset-0 bg-[#930708]/90"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/95"></div>
       
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none mix-blend-overlay"></div>
@@ -42,7 +42,7 @@ export default function CTA() {
 
           <a 
             href="#contact" 
-            className="flex items-center justify-between w-[220px] h-[56px] bg-white text-[#930708] font-sans text-[11px] uppercase tracking-widest font-bold px-8 rounded-sm hover:bg-gray-100 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all group duration-300"
+            className="flex items-center justify-between w-[220px] h-[56px] bg-white text-[#1B1B1B] font-sans text-[11px] uppercase tracking-widest font-bold px-8 rounded-sm hover:bg-gray-100 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)] transition-all group duration-300"
           >
             Start a Project
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
