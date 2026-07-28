@@ -5,18 +5,18 @@ import HeroVisual from './HeroVisual';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-logo-red selection:text-white pb-10 lg:pb-0">
+    <section className="relative w-full h-auto min-h-[100vh] lg:min-h-[750px] bg-ivory overflow-hidden selection:bg-logo-red selection:text-white pb-16 lg:pb-20">
       <Header />
-      
+
       {/* Background/Visual Layer */}
       <HeroVisual />
-      
+
       {/* Left Content Area */}
-      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-10 lg:pb-0">
+      <div className="relative z-10 w-full lg:w-[54%] h-full pt-[110px] lg:pt-[140px] px-8 lg:pl-[65px] flex flex-col pb-16 lg:pb-20">
         <div className="max-w-[650px]">
-          
+
           {/* Eyebrow */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -29,7 +29,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
@@ -42,7 +42,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Decorative Divider */}
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             animate={{ width: 70 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
@@ -50,7 +50,7 @@ export default function Hero() {
           ></motion.div>
 
           {/* Paragraph */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
@@ -60,29 +60,29 @@ export default function Hero() {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
             className="flex flex-col sm:flex-row items-center gap-5"
           >
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
             >
               Explore Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
             </a>
-            
-            <a 
-              href="#contact" 
+
+            <a
+              href="#contact"
               className="flex items-center justify-between w-full sm:w-[210px] h-[56px] bg-logo-red text-white font-sans text-[11px] uppercase tracking-widest font-medium px-8 rounded-sm hover:bg-[#7a0507] transition-colors group"
             >
               Contact Us
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
             </a>
           </motion.div>
-          
+
         </div>
       </div>
 

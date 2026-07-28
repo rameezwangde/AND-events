@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CalendarDays, Cake, Heart, Clapperboard, Music, Megaphone, Sparkles, Camera } from 'lucide-react';
 
 const services = [
-  { id: 1, title: 'CORPORATE EVENTS', desc: 'Gala Dinners, Product Launches, Conferences, Team Building and more.', icon: CalendarDays, img: 'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/11/01/1154/SELRS-P1200-Grand-Ballroom-Business-Conference.jpg/SELRS-P1200-Grand-Ballroom-Business-Conference.4x3.jpg', rotate: -3, pinType: 'clip', offsetClass: 'lg:mt-10 lg:mr-[-10px] z-20' },
-  { id: 2, title: 'BIRTHDAY / THEME PARTIES', desc: 'From intimate celebrations to grand theme parties, we design magical moments.', icon: Cake, img: 'https://img.freepik.com/premium-photo/birthday-party-with-balloons-banner-that-says-bday_1015384-65431.jpg', rotate: 2, pinType: 'tape', offsetClass: 'lg:mt-8 z-10' },
-  { id: 3, title: 'WEDDING CELEBRATIONS', desc: 'End-to-end wedding planning and flawless execution for your beautiful beginning.', icon: Heart, img: 'https://i.pinimg.com/originals/c3/3b/80/c33b8076fdce4f23372ae540744341c5.gif', rotate: -4, pinType: 'pin', offsetClass: 'lg:mt-16 lg:ml-[-10px] z-30' },
-  { id: 4, title: 'IN-HOUSE PRODUCTION', desc: 'State-of-the-art in-house production and technical solutions for a seamless experience.', icon: Clapperboard, img: 'https://picsum.photos/seed/production/800/600', rotate: 4, pinType: 'tape', offsetClass: 'lg:mt-[20px] lg:mr-[-15px] z-40' },
-  { id: 5, title: 'ENTERTAINMENT & PERFORMERS', desc: 'Dancers, Performers, Bollywood artists, Samba Dancers and Percussionists.', icon: Music, img: 'https://tse4.mm.bing.net/th/id/OIP.yq8FRnkRTxObxDck6TTalgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3', rotate: -1, pinType: 'clip', offsetClass: 'lg:mt-8 z-20' },
-  { id: 6, title: 'EVENTS & ACTIVATIONS', desc: 'Mall Activations, Road Shows, Exhibitions, Supplier Meets, and Annual Days.', icon: Megaphone, img: 'https://www.canvasidea.in/images/Exhibitions.webp', rotate: 3, pinType: 'tape', offsetClass: 'lg:mt-20 lg:ml-[-20px] z-30' },
+  { id: 1, title: 'CORPORATE EVENTS', desc: 'Gala Dinners, Product Launches, Conferences, Team Building and more.', icon: CalendarDays, img: 'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/11/01/1154/SELRS-P1200-Grand-Ballroom-Business-Conference.jpg/SELRS-P1200-Grand-Ballroom-Business-Conference.4x3.jpg', rotate: 0, pinType: 'clip', offsetClass: 'z-10' },
+  { id: 2, title: 'BIRTHDAY / THEME PARTIES', desc: 'From intimate celebrations to grand theme parties, we design magical moments.', icon: Cake, img: 'https://img.freepik.com/premium-photo/birthday-party-with-balloons-banner-that-says-bday_1015384-65431.jpg', rotate: 0, pinType: 'tape', offsetClass: 'z-10' },
+  { id: 3, title: 'WEDDING CELEBRATIONS', desc: 'End-to-end wedding planning and flawless execution for your beautiful beginning.', icon: Heart, img: 'https://i.pinimg.com/originals/c3/3b/80/c33b8076fdce4f23372ae540744341c5.gif', rotate: 0, pinType: 'pin', offsetClass: 'z-10' },
+  { id: 4, title: 'IN-HOUSE PRODUCTION', desc: 'State-of-the-art in-house production and technical solutions for a seamless experience.', icon: Clapperboard, img: 'https://picsum.photos/seed/production/800/600', rotate: 0, pinType: 'tape', offsetClass: 'z-10' },
+  { id: 5, title: 'ENTERTAINMENT & PERFORMERS', desc: 'Dancers, Performers, Bollywood artists, Samba Dancers and Percussionists.', icon: Music, img: 'https://tse4.mm.bing.net/th/id/OIP.yq8FRnkRTxObxDck6TTalgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3', rotate: 0, pinType: 'clip', offsetClass: 'z-10' },
+  { id: 6, title: 'EVENTS & ACTIVATIONS', desc: 'Mall Activations, Road Shows, Exhibitions, Supplier Meets, and Annual Days.', icon: Megaphone, img: 'https://www.canvasidea.in/images/Exhibitions.webp', rotate: 0, pinType: 'tape', offsetClass: 'z-10' },
 ];
 
 export default function OurServices() {
@@ -78,7 +78,7 @@ export default function OurServices() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
                 whileHover={{ rotate: 0, scale: 1.05, zIndex: 100, y: -10 }}
-                className={`relative bg-[#FFFDF9] rounded-[2px] p-4 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-15px_rgba(138,28,34,0.3)] transition-shadow duration-400 group cursor-pointer ${card.offsetClass}`}
+                className={`relative bg-[#FFFDF9] rounded-[2px] p-4 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-15px_rgba(138,28,34,0.3)] transition-shadow duration-400 group cursor-pointer flex flex-col justify-between h-full ${card.offsetClass}`}
                 style={{ 
                   boxShadow: "2px 2px 10px rgba(0,0,0,0.05), inset 0 0 40px rgba(0,0,0,0.02)"
                 }}
@@ -98,7 +98,7 @@ export default function OurServices() {
                 )}
 
                 {/* Card Image Wrapper */}
-                <div className="relative mb-6">
+                <div className="relative mb-6 shrink-0">
                   <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden bg-gray-100">
                     <motion.img 
                       src={card.img} 
@@ -113,8 +113,8 @@ export default function OurServices() {
                 </div>
 
                 {/* Content */}
-                <div className="pt-2 pb-4 px-2 text-center">
-                  <h4 className="font-sans text-[11px] uppercase tracking-[0.1em] font-bold text-[#930708] mb-2 leading-tight">
+                <div className="pt-2 pb-2 px-2 text-center flex flex-col flex-1 justify-start">
+                  <h4 className="font-sans text-[11px] uppercase tracking-[0.1em] font-bold text-[#930708] mb-2 leading-tight min-h-[32px] flex items-center justify-center">
                     {card.title}
                   </h4>
                   <p className="font-sans text-[11px] text-[#666] leading-relaxed line-clamp-3">
