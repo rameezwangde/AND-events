@@ -7,7 +7,6 @@ const navLinks = [
   { name: 'About Us', active: false },
   { name: 'Services', active: false },
   { name: 'Our Work', active: false },
-  { name: 'Themes', active: false },
   { name: 'Contact Us', active: false },
 ];
 
