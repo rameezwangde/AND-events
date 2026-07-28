@@ -23,7 +23,7 @@ export default function OurServices() {
         <div className="w-full lg:w-[40%] flex flex-col lg:sticky lg:top-[120px]">
           
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#930708]">
+            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#930708] translate-y-[12px]">
               Our Services
             </span>
             <div className="w-1.5 h-1.5 rounded-full bg-[#930708] opacity-50"></div>
