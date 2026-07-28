@@ -41,18 +41,12 @@ function HexagonTile({ partner }) {
 
 export default function Partners() {
   return (
-    <section className="relative w-full bg-[#FBF9F6] pt-10 lg:pt-16 pb-10 lg:pb-16 overflow-hidden selection:bg-[#8A1C22] selection:text-white">
+    <section className="relative w-full bg-[#FBF9F6] pt-4 lg:pt-8 pb-10 lg:pb-16 overflow-hidden selection:bg-[#8A1C22] selection:text-white">
       
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 flex flex-col items-center">
         
         {/* Heading */}
-        <div className="text-center mb-16 md:mb-24 flex flex-col items-center">
-          <div className="w-[40px] h-[40px] mb-6 text-[#8A1C22] opacity-80">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-              <path d="M12 4v16m-8-8h16" />
-              <circle cx="12" cy="12" r="10" />
-            </svg>
-          </div>
+        <div className="text-center mb-8 md:mb-10 flex flex-col items-center">
           <h2 className="font-sans text-[32px] md:text-[48px] font-bold text-[#1B1B1B] tracking-tight uppercase leading-none mb-4">
             Our <span className="text-[#8A1C22]">Partners</span>
           </h2>

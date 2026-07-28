@@ -17,7 +17,7 @@ export default function OurServices() {
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.3] pointer-events-none"></div>
 
-      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-8">
+      <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col lg:flex-row items-start justify-center gap-16 lg:gap-16">
         
         {/* LEFT COLUMN */}
         <div className="w-full lg:w-[40%] flex flex-col lg:sticky lg:top-[120px]">
