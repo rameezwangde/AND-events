@@ -22,7 +22,7 @@ export default function OurStory() {
   const radius = 280; // dotted circle radius
 
   return (
-    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6B0F1A] selection:text-white pt-10 lg:pt-4 pb-0">
+    <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#6E0F18] selection:text-white pt-10 lg:pt-4 pb-0">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-[50vw] max-w-[400px] h-[50vw] max-h-[400px] border-t-[1px] border-l-[1px] border-[#C8A56A]/20 rounded-tl-full opacity-50 md:top-5 md:left-5"></div>
@@ -44,27 +44,27 @@ export default function OurStory() {
           >
             {/* Eyebrow */}
             <div className="flex flex-col items-start mb-8">
-              <span className="font-sans text-[14px] md:text-[16px] uppercase tracking-[0.25em] text-[#6B0F1A] font-bold mb-3">
+              <span className="font-sans text-[14px] md:text-[16px] uppercase tracking-[0.25em] text-[#6E0F18] font-bold mb-3">
                 Our Story
               </span>
               <div className="flex items-center w-full max-w-[100px]">
-                <div className="flex-1 h-[1px] bg-[#6B0F1A]/30"></div>
-                <div className="w-[6px] h-[6px] border border-[#6B0F1A]/50 rotate-45 mx-2"></div>
-                <div className="flex-1 h-[1px] bg-[#6B0F1A]/30"></div>
+                <div className="flex-1 h-[1px] bg-[#6E0F18]/30"></div>
+                <div className="w-[6px] h-[6px] border border-[#6E0F18]/50 rotate-45 mx-2"></div>
+                <div className="flex-1 h-[1px] bg-[#6E0F18]/30"></div>
               </div>
             </div>
 
             {/* Main Heading */}
             <h2 className="font-serif text-[36px] md:text-[48px] xl:text-[56px] leading-[1.05] mb-10 ml-[-2px] md:ml-[-4px]">
               <span className="block text-black font-medium">Crafting Moments.</span>
-              <span className="block text-[#6B0F1A] font-medium">Creating Legacies.</span>
+              <span className="block text-[#6E0F18] font-medium">Creating Legacies.</span>
             </h2>
 
             {/* Decorative divider under heading */}
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-[40px] h-[1px] bg-[#6B0F1A]/30"></div>
+              <div className="w-[40px] h-[1px] bg-[#6E0F18]/30"></div>
               <div className="w-[4px] h-[4px] rounded-full bg-[#C8A56A]"></div>
-              <div className="w-[100px] h-[1px] bg-gradient-to-r from-[#6B0F1A]/30 to-transparent"></div>
+              <div className="w-[100px] h-[1px] bg-gradient-to-r from-[#6E0F18]/30 to-transparent"></div>
             </div>
 
             {/* Paragraph */}
@@ -74,7 +74,7 @@ export default function OurStory() {
             </p>
 
             {/* Outline Button */}
-            <a href="#journey" className="flex items-center justify-between w-max gap-6 h-[54px] bg-white text-[#6B0F1A] border border-[#6B0F1A] font-sans text-[12px] uppercase tracking-[0.15em] font-bold px-8 rounded-sm hover:bg-[#6B0F1A] hover:text-white transition-all duration-400 group shadow-md hover:shadow-xl">
+            <a href="#journey" className="flex items-center justify-between w-max gap-6 h-[54px] bg-white text-[#6E0F18] border border-[#6E0F18] font-sans text-[12px] uppercase tracking-[0.15em] font-bold px-8 rounded-sm hover:bg-[#6E0F18] hover:text-white transition-all duration-400 group shadow-md hover:shadow-xl">
               Discover Our Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-400" strokeWidth={1.5} />
             </a>
@@ -87,7 +87,7 @@ export default function OurStory() {
             <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] z-10 flex items-center justify-center">
               
               {/* Soft Radial Light */}
-              <div className="absolute inset-0 bg-[#6B0F1A] blur-[100px] rounded-full opacity-10"></div>
+              <div className="absolute inset-0 bg-[#6E0F18] blur-[100px] rounded-full opacity-10"></div>
               
               {/* Organic Burgundy Blob (SVG) */}
               <div className="absolute w-[120%] h-[120%] z-0 text-[#4B080E] opacity-90" style={{ transform: 'rotate(15deg)' }}>
@@ -104,7 +104,7 @@ export default function OurStory() {
             </div>
 
             {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
-            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#6B0F1A]/40 z-0 hidden md:block">
+            <div className="absolute w-[400px] h-[400px] md:w-[560px] md:h-[560px] rounded-full border-[1.5px] border-dotted border-[#6E0F18]/40 z-0 hidden md:block">
               {/* Animated Traveling Dot */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -115,10 +115,10 @@ export default function OurStory() {
               </motion.div>
 
               {/* Static tiny nodes at quarters */}
-              <div className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
-              <div className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
-              <div className="absolute left-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
-              <div className="absolute right-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6B0F1A]"></div>
+              <div className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
+              <div className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
+              <div className="absolute left-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
+              <div className="absolute right-[-3px] top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#6E0F18]"></div>
             </div>
 
             {/* Floating Cards (Absolute on md+, Stacked horizontally on mobile) */}
@@ -154,11 +154,11 @@ export default function OurStory() {
                         className="w-full bg-white rounded-[20px] p-[16px] shadow-[0_15px_40px_-10px_rgba(107,15,26,0.08)] cursor-pointer group hover:-translate-y-[10px] transition-all duration-400"
                       >
                         <div className="flex gap-3 items-start">
-                          <div className="w-8 h-8 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
+                          <div className="w-8 h-8 rounded-full bg-[#6E0F18] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-400 shadow-lg">
                             <card.icon className="w-3.5 h-3.5 text-white stroke-[2px]" />
                           </div>
                           <div className="flex flex-col mt-1">
-                            <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#6B0F1A] mb-1.5">
+                            <h4 className="font-sans text-[12px] uppercase tracking-[0.15em] font-bold text-[#6E0F18] mb-1.5">
                               {card.title}
                             </h4>
                             <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
@@ -178,11 +178,11 @@ export default function OurStory() {
               {floatingCards.map((card) => (
                 <div key={card.id} className="min-w-[240px] snap-center bg-white rounded-[20px] p-[20px] shadow-[0_15px_30px_-10px_rgba(107,15,26,0.08)]">
                   <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-full bg-[#6B0F1A] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#6E0F18] flex items-center justify-center shrink-0">
                       <card.icon className="w-4 h-4 text-white stroke-[2px]" />
                     </div>
                     <div className="flex flex-col mt-1">
-                      <h4 className="font-sans text-[11px] uppercase tracking-[0.15em] font-bold text-[#6B0F1A] mb-1.5">
+                      <h4 className="font-sans text-[11px] uppercase tracking-[0.15em] font-bold text-[#6E0F18] mb-1.5">
                         {card.title}
                       </h4>
                       <p className="font-sans text-[12px] text-gray-500 leading-relaxed">
@@ -198,41 +198,32 @@ export default function OurStory() {
         </div>
 
         {/* BOTTOM FEATURE STRIP */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full mt-32 md:mt-10 bg-white rounded-[24px] md:rounded-[32px] border border-[#6B0F1A]/20 shadow-[0_20px_50px_-20px_rgba(107,15,26,0.1)] p-8 md:p-12 xl:h-[180px] flex flex-col xl:flex-row items-center relative overflow-hidden"
-        >
-          {/* Subtle angled corner cuts (Chamfer illusion using absolute shapes) */}
-          <div className="absolute top-[-10px] left-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-b border-r border-[#6B0F1A]/20"></div>
-          <div className="absolute top-[-10px] right-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-b border-l border-[#6B0F1A]/20"></div>
-          <div className="absolute bottom-[-10px] left-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-t border-r border-[#6B0F1A]/20"></div>
-          <div className="absolute bottom-[-10px] right-[-10px] w-12 h-12 bg-[#6B0F1A] rotate-45 border-t border-l border-[#6B0F1A]/20"></div>
-
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 xl:gap-0 relative z-10">
-            {featureStrips.map((feature, idx) => (
-              <div 
-                key={idx} 
-                className={`flex flex-col items-center text-center group cursor-pointer hover:-translate-y-2 transition-transform duration-400 ${
-                  idx !== featureStrips.length - 1 ? 'xl:border-r border-[#6B0F1A]/10' : ''
-                } px-4`}
-              >
-                <div className="w-10 h-10 rounded-full bg-[#F8F4EE] border border-[#6B0F1A]/20 flex items-center justify-center mb-4 group-hover:bg-[#6B0F1A] transition-colors duration-400">
-                  <feature.icon className="w-4 h-4 text-[#6B0F1A] group-hover:text-white transition-colors duration-400" />
+        <div className="w-full mt-32 md:mt-24 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 relative z-10">
+          {featureStrips.map((feature, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 * idx, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="group flex flex-col items-center text-center bg-[#6E0F18] hover:bg-[#4B080E] border border-[#C8A56A]/20 hover:border-[#C8A56A]/60 rounded-2xl p-8 xl:p-10 shadow-lg hover:shadow-[0_20px_40px_-15px_rgba(43,4,8,0.6)] transition-all duration-500 cursor-pointer"
+            >
+              <div className="relative w-16 h-16 mb-8 flex items-center justify-center">
+                <div className="absolute inset-0 bg-white/5 rounded-full scale-100 group-hover:scale-[1.8] transition-transform duration-700 ease-out opacity-100 group-hover:opacity-0"></div>
+                <div className="relative w-14 h-14 rounded-full bg-white/10 shadow-inner flex items-center justify-center group-hover:bg-white/20 transition-colors duration-500 border border-white/5">
+                  <feature.icon className="w-5 h-5 text-white transition-colors duration-500 stroke-[1.5px]" />
                 </div>
-                <h5 className="font-sans text-[12px] uppercase tracking-[0.15em] text-[#6B0F1A] font-bold mb-3">
-                  {feature.title}
-                </h5>
-                <p className="font-sans text-[12px] text-gray-500 max-w-[220px] leading-relaxed mb-4">
-                  {feature.desc}
-                </p>
-                <div className="w-8 h-[1px] bg-[#6B0F1A]/30 group-hover:bg-[#C8A56A] group-hover:w-12 transition-all duration-400"></div>
               </div>
-            ))}
-          </div>
-        </motion.div>
+              <h5 className="font-sans text-[13px] uppercase tracking-[0.2em] text-white font-bold mb-4">
+                {feature.title}
+              </h5>
+              <div className="w-6 h-[1px] bg-[#C8A56A]/50 mb-5 group-hover:w-12 transition-all duration-500"></div>
+              <p className="font-sans text-[13px] text-white/70 leading-[1.8] mb-0 group-hover:text-white/90 transition-colors duration-500">
+                {feature.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
 
       </div>
     </section>

@@ -12,7 +12,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#8A1C22] selection:text-white pt-0 pb-8 lg:pt-0 lg:pb-8 px-6 lg:px-10 -mt-10">
+    <section className="relative w-full bg-[#F8F3EE] overflow-hidden selection:bg-[#6E0F18] selection:text-white pt-0 pb-8 lg:pt-0 lg:pb-8 px-6 lg:px-10 -mt-10">
       
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-[0.3] pointer-events-none"></div>
@@ -23,20 +23,20 @@ export default function OurServices() {
         <div className="w-full lg:w-[40%] flex flex-col lg:sticky lg:top-[120px]">
           
           <div className="flex items-center gap-4 mb-6">
-            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#8A1C22]">
+            <span className="font-sans text-[13px] md:text-[14px] uppercase tracking-[0.2em] font-bold text-[#6E0F18]">
               Our Services
             </span>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#8A1C22] opacity-50"></div>
-            <div className="flex-1 h-[1px] bg-[#8A1C22]/20"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#6E0F18] opacity-50"></div>
+            <div className="flex-1 h-[1px] bg-[#6E0F18]/20"></div>
           </div>
 
           <h2 className="font-serif text-[48px] md:text-[64px] leading-[1.05] tracking-tight mb-6">
             <span className="block text-[#1B1B1B]">Creating Experiences.</span>
-            <span className="block text-[#8A1C22]">Celebrating Together.</span>
+            <span className="block text-[#6E0F18]">Celebrating Together.</span>
           </h2>
 
           {/* Brush stroke SVG */}
-          <div className="w-[140px] h-[12px] mb-10 text-[#8A1C22] opacity-80">
+          <div className="w-[140px] h-[12px] mb-10 text-[#6E0F18] opacity-80">
             <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" className="w-full h-full fill-current">
               <path d="M5,15 C40,5 120,5 195,15 C120,10 40,10 5,15 Z" />
             </svg>
@@ -48,7 +48,7 @@ export default function OurServices() {
             Whatever the occasion, we deliver an experience that stays with you forever.
           </p>
 
-          <a href="#services" className="relative flex items-center justify-between w-max gap-8 h-[60px] bg-gradient-to-b from-[#8F1E26] to-[#6F1116] text-white font-sans text-[13px] uppercase tracking-[0.1em] font-semibold px-8 rounded-lg shadow-[0_15px_30px_-10px_rgba(138,28,34,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(138,28,34,0.6)] hover:-translate-y-1 hover:rotate-1 transition-all duration-400 group overflow-hidden">
+          <a href="#services" className="relative flex items-center justify-between w-max gap-8 h-[60px] bg-[#6E0F18] text-white font-sans text-[13px] uppercase tracking-[0.1em] font-semibold px-8 rounded-lg shadow-[0_15px_30px_-10px_rgba(43,4,8,0.4)] hover:shadow-[0_20px_40px_-10px_rgba(43,4,8,0.6)] hover:-translate-y-1 hover:rotate-1 transition-all duration-400 group overflow-hidden">
             <span className="relative z-10">Explore Our Services</span>
             <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform duration-400" />
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
@@ -60,13 +60,13 @@ export default function OurServices() {
         <div className="w-full lg:w-[45%] lg:pr-10 relative lg:pt-[80px]">
           
           {/* Decorative Doodles */}
-          <svg className="absolute top-[20%] left-[-5%] w-[80px] h-[80px] text-[#8A1C22] opacity-30 -rotate-12 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="absolute top-[20%] left-[-5%] w-[80px] h-[80px] text-[#6E0F18] opacity-30 -rotate-12 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M10,90 Q50,10 90,90 M80,70 L90,90 L70,90" />
           </svg>
-          <svg className="absolute bottom-[20%] right-[-5%] w-[100px] h-[100px] text-[#8A1C22] opacity-20 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="absolute bottom-[20%] right-[-5%] w-[100px] h-[100px] text-[#6E0F18] opacity-20 hidden xl:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="50" cy="50" r="40" strokeDasharray="4 4" />
           </svg>
-          <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-[#8A1C22] rounded-full opacity-20 hidden xl:block"></div>
+          <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-[#6E0F18] rounded-full opacity-20 hidden xl:block"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8 relative">
             
@@ -107,14 +107,14 @@ export default function OurServices() {
                     />
                   </div>
                   {/* Floating Icon */}
-                  <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-10 h-10 bg-[#8A1C22] rounded-full flex items-center justify-center border-[3px] border-[#FFFDF9] shadow-lg group-hover:-translate-y-2 group-hover:scale-110 transition-transform duration-400 z-30">
+                  <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 w-10 h-10 bg-[#6E0F18] rounded-full flex items-center justify-center border-[3px] border-[#FFFDF9] shadow-lg group-hover:-translate-y-2 group-hover:scale-110 transition-transform duration-400 z-30">
                     <card.icon className="w-4 h-4 text-white stroke-[2px]" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="pt-2 pb-4 px-2 text-center">
-                  <h4 className="font-sans text-[11px] uppercase tracking-[0.1em] font-bold text-[#8A1C22] mb-2 leading-tight">
+                  <h4 className="font-sans text-[11px] uppercase tracking-[0.1em] font-bold text-[#6E0F18] mb-2 leading-tight">
                     {card.title}
                   </h4>
                   <p className="font-sans text-[11px] text-[#666] leading-relaxed line-clamp-3">

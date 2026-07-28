@@ -25,7 +25,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#2B0408] to-[#1A0204] text-white pt-20 lg:pt-32 pb-10 px-6 lg:px-[70px] relative overflow-hidden">
+    <footer className="w-full bg-gradient-to-b from-[#6E0F18] to-[#4B080E] text-white pt-20 lg:pt-32 pb-10 px-6 lg:px-[70px] relative overflow-hidden">
       
       {/* Decorative large logo in background */}
       <div className="absolute top-[-10%] left-[-5%] text-[300px] font-serif font-bold text-white/5 pointer-events-none tracking-tighter leading-none select-none">
@@ -47,16 +47,16 @@ export default function Footer() {
 
             {/* Newsletter */}
             <div className="flex flex-col gap-3 max-w-[400px]">
-              <span className="font-sans text-[11px] uppercase tracking-[0.15em] text-[#C8A977] font-bold">
+              <span className="font-sans text-[11px] uppercase tracking-[0.15em] text-white/80 font-bold">
                 Subscribe to our newsletter
               </span>
-              <div className="flex w-full bg-white/5 rounded-full border border-white/10 overflow-hidden focus-within:border-[#C8A977] transition-colors">
+              <div className="flex w-full bg-white/5 rounded-full border border-white/10 overflow-hidden focus-within:border-white/40 transition-colors">
                 <input 
                   type="email" 
                   placeholder="Email address" 
                   className="bg-transparent text-white text-[14px] px-6 py-3.5 w-full outline-none placeholder:text-white/30"
                 />
-                <button className="bg-[#6E0F18] text-white px-6 font-sans text-[11px] uppercase tracking-[0.1em] font-bold hover:bg-[#C8A977] hover:text-[#2B0408] transition-colors">
+                <button className="bg-[#6E0F18] text-white px-6 font-sans text-[11px] uppercase tracking-[0.1em] font-bold hover:bg-white hover:text-[#6E0F18] transition-colors">
                   Join
                 </button>
               </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Quick Links (Col span 2) */}
           <div className="col-span-1 lg:col-span-2 flex flex-col">
-            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-[#C8A977] font-bold mb-6 lg:mb-8">
+            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-white/80 font-bold mb-6 lg:mb-8">
               Company
             </h6>
             <ul className="flex flex-col gap-4">
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Services (Col span 2) */}
           <div className="col-span-1 lg:col-span-2 flex flex-col">
-            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-[#C8A977] font-bold mb-6 lg:mb-8">
+            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-white/80 font-bold mb-6 lg:mb-8">
               Expertise
             </h6>
             <ul className="flex flex-col gap-4">
@@ -97,24 +97,24 @@ export default function Footer() {
 
           {/* Contact (Col span 3) */}
           <div className="col-span-1 lg:col-span-3 flex flex-col">
-            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-[#C8A977] font-bold mb-6 lg:mb-8">
+            <h6 className="font-sans text-[12px] uppercase tracking-[0.2em] text-white/80 font-bold mb-6 lg:mb-8">
               Get in Touch
             </h6>
             <ul className="flex flex-col gap-6">
               <li className="flex items-start gap-4 group cursor-pointer">
-                <MapPin className="w-5 h-5 text-[#C8A977] mt-1 shrink-0 group-hover:scale-110 transition-transform" />
+                <MapPin className="w-5 h-5 text-white/60 mt-1 shrink-0 group-hover:scale-110 group-hover:text-white transition-all" />
                 <span className="font-sans text-[14px] text-white/70 leading-relaxed group-hover:text-white transition-colors">
                   Boulevard Plaza Tower 1,<br />Downtown Dubai, UAE
                 </span>
               </li>
               <li className="flex items-center gap-4 group cursor-pointer">
-                <Phone className="w-5 h-5 text-[#C8A977] shrink-0 group-hover:scale-110 transition-transform" />
+                <Phone className="w-5 h-5 text-white/60 shrink-0 group-hover:scale-110 group-hover:text-white transition-all" />
                 <span className="font-sans text-[14px] text-white/70 group-hover:text-white transition-colors">
                   +971 4 123 4567
                 </span>
               </li>
               <li className="flex items-center gap-4 group cursor-pointer">
-                <Mail className="w-5 h-5 text-[#C8A977] shrink-0 group-hover:scale-110 transition-transform" />
+                <Mail className="w-5 h-5 text-white/60 shrink-0 group-hover:scale-110 group-hover:text-white transition-all" />
                 <span className="font-sans text-[14px] text-white/70 group-hover:text-white transition-colors">
                   hello@andevents.ae
                 </span>
@@ -140,7 +140,7 @@ export default function Footer() {
               <a 
                 key={idx} 
                 href={social.href} 
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-[#C8A977] hover:border-[#C8A977] hover:text-[#2B0408] transition-colors duration-300"
+                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/70 hover:bg-white hover:border-white hover:text-[#6E0F18] transition-colors duration-300"
               >
                 <social.icon className="w-4 h-4" />
               </a>

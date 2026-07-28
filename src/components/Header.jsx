@@ -59,7 +59,7 @@ export default function Header() {
           {/* CTA Button only on Desktop */}
           <a 
             href="#contact" 
-            className="hidden lg:flex items-center justify-center bg-[#6E0F18] text-white px-8 py-3.5 rounded-full font-sans text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-black hover:scale-105 transition-all duration-300"
+            className="hidden lg:flex items-center justify-center bg-deep-maroon text-white px-8 py-3.5 rounded-full font-sans text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-dark-maroon hover:scale-105 transition-all duration-300"
           >
             Let's Create Magic
           </a>
@@ -67,7 +67,7 @@ export default function Header() {
           {/* Mobile Hamburger Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
-            className="lg:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full transition-all duration-300 group hover:scale-105 hover:bg-[#6E0F18]"
+            className="lg:hidden flex items-center justify-center w-[44px] h-[44px] rounded-full transition-all duration-300 group hover:scale-105 hover:bg-deep-maroon"
             style={{ border: '1px solid rgba(90,60,40,.18)' }}
             aria-label="Menu"
           >
