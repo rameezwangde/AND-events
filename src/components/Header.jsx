@@ -30,7 +30,7 @@ export default function Header() {
 
 
         {/* Logo */}
-        <a href="#" className="relative z-10 flex items-center justify-start w-[80px] lg:w-[100px]">
+        <a href="#" className="relative z-10 flex items-center justify-start w-[120px] lg:w-[140px]">
           <img src="/and-logo.jpeg" alt="AND Events Management Logo" className="w-full h-auto object-contain rounded-lg" />
         </a>
 
