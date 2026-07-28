@@ -37,13 +37,8 @@ export default function Footer() {
           
           {/* Brand & Newsletter (Col span 4) */}
           <div className="col-span-1 lg:col-span-5 flex flex-col pr-0 lg:pr-12">
-            <a href="#" className="flex flex-col items-start w-max mb-8">
-              <span className="font-serif text-white text-4xl lg:text-5xl font-bold leading-none tracking-tight">
-                AND
-              </span>
-              <span className="font-sans text-[#C8A977] text-[10px] uppercase tracking-[0.25em] mt-1 font-medium whitespace-nowrap">
-                Events Management
-              </span>
+            <a href="#" className="flex items-center justify-start w-[150px] lg:w-[180px] mb-8">
+              <img src="/and-logo.jpeg" alt="AND Events Management Logo" className="w-full h-auto object-contain rounded-lg" />
             </a>
             
             <p className="font-sans text-white/60 text-[14px] leading-relaxed max-w-[350px] mb-8">
