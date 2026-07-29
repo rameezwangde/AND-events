@@ -14,8 +14,6 @@ const floatingCards = [
 
 
 export default function OurStory() {
-  const radius = 320; // dotted circle radius
-
   return (
     <section className="relative w-full bg-[#F8F4EE] overflow-hidden selection:bg-[#930708] selection:text-white pt-10 lg:pt-4 pb-0">
       
@@ -76,10 +74,10 @@ export default function OurStory() {
           </motion.div>
 
           {/* RIGHT COLUMN - Circular Diagram (approx 58%) */}
-          <div className="w-full lg:w-[58%] relative flex justify-center items-center h-[700px] lg:h-[800px] mt-20 lg:mt-0">
+          <div className="w-full lg:w-[58%] relative flex justify-center items-center h-[700px] lg:h-[800px] mt-20 lg:mt-0 md:[--orbit-radius:280px] lg:[--orbit-radius:220px] xl:[--orbit-radius:270px] 2xl:[--orbit-radius:320px]">
             
             {/* Center Area */}
-            <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] z-10 flex items-center justify-center">
+            <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] lg:w-[300px] lg:h-[300px] xl:w-[380px] xl:h-[380px] z-10 flex items-center justify-center">
               
               {/* Soft Radial Light */}
               <div className="absolute inset-0 bg-[#930708] blur-[100px] rounded-full opacity-10"></div>
@@ -99,7 +97,13 @@ export default function OurStory() {
             </div>
 
             {/* Dotted Circular Path (Hidden on mobile for better stacking, visible md+) */}
-            <div className="absolute w-[400px] h-[400px] md:w-[640px] md:h-[640px] rounded-full border-[1.5px] border-dotted border-[#930708]/40 z-0 hidden md:block">
+            <div 
+              className="absolute rounded-full border-[1.5px] border-dotted border-[#930708]/40 z-0 hidden md:block"
+              style={{
+                width: 'calc(var(--orbit-radius) * 2)',
+                height: 'calc(var(--orbit-radius) * 2)'
+              }}
+            >
               {/* Animated Traveling Dot */}
               <motion.div 
                 animate={{ rotate: 360 }}
@@ -124,15 +128,13 @@ export default function OurStory() {
             >
               {floatingCards.map((card, idx) => {
                 const angleRad = (card.angle * Math.PI) / 180;
-                const x = radius * Math.cos(angleRad);
-                const y = radius * Math.sin(angleRad);
                 
                 return (
                   <div
                     key={card.id}
                     className="absolute top-1/2 left-1/2 w-[185px] pointer-events-auto z-20"
                     style={{
-                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
+                      transform: `translate(calc(-50% + var(--orbit-radius) * ${Math.cos(angleRad)}), calc(-50% + var(--orbit-radius) * ${Math.sin(angleRad)}))`
                     }}
                   >
                     {/* Counter-rotation to keep cards upright while the parent container orbits */}
